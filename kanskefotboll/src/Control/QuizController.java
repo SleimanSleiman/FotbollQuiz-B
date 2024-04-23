@@ -135,6 +135,22 @@ public class QuizController {
         });
     }
 
+    public void handleTimeOut() {
+        if(quiz.getCurrentQuestion() != null) {
+            player.decreaseLives();
+            checkPlayerStatus();
 
-
+            quiz.moveToNextQuestion();
+            if (quiz.hasNextQuestion()) {
+                SwingUtilities.invokeLater(new Runnable() {
+                    @Override
+                    public void run() {
+                        showNextQuestion();
+                    }
+                });
+                } else {
+                endQuiz();
+            }
+        }
+    }
 }

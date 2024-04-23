@@ -6,6 +6,7 @@ import Model.Question;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.Timer;
 
 public class QuizGUI {
     private JFrame frame;
@@ -14,10 +15,13 @@ public class QuizGUI {
     private JRadioButton[] optionButtons;
     private JButton submitButton;
     private JLabel livesLabel;
+    private JLabel timerLabel;
 
     private ButtonGroup buttonGroup;
 
     private QuizController quizController;
+    private Timer timer;
+    private int timeLeft = 30;
 
     public QuizGUI(QuizController quizController) {
         this.quizController = quizController;
@@ -38,6 +42,10 @@ public class QuizGUI {
         livesLabel = new JLabel("Lives: 1");
         livesLabel.setBounds(50, 80, 200, 30);
         frame.add(livesLabel);
+
+        timerLabel = new JLabel("Tid: 30");
+        timerLabel.setBounds(500,20, 100, 30);
+        frame.add(timerLabel);
 
         optionButtons = new JRadioButton[4];
         buttonGroup = new ButtonGroup();
@@ -64,9 +72,10 @@ public class QuizGUI {
                     }
                 }
                 quizController.submitAnswer(selectedOption);
+                resetTimer();
             }
         });
-
+        setupTimer();
         frame.setVisible(true);
     }
 
@@ -77,6 +86,7 @@ public class QuizGUI {
             optionButtons[i].setText(options[i]);
             optionButtons[i].setVisible(true);
         }
+        resetTimer();
     }
 
     public void hideOptions() {
@@ -84,6 +94,27 @@ public class QuizGUI {
             optionButtons[i].setVisible(false);
         }
     }
+
+    private void setupTimer() {
+        timer = new Timer(1000, new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                timeLeft--;
+                timerLabel.setText("Time left: " + timeLeft);
+                if (timeLeft == 0) {
+                    timer.stop();
+                    quizController.handleTimeOut();
+                }
+            }
+        });
+    }
+
+    public void resetTimer() {
+        timeLeft = 30;
+        timerLabel.setText("Time left: " + timeLeft);
+        timer.start();
+    }
+
 
     public void updateScore(int score) {
         scoreLabel.setText("Score: " + score);
