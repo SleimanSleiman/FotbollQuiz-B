@@ -15,13 +15,13 @@ public class QuizGUI {
     private JRadioButton[] optionButtons;
     private JButton submitButton;
     private JLabel livesLabel;
-    private JLabel timerLabel;
+    private JLabel timerLabel; // @author Ali Farhan
 
     private ButtonGroup buttonGroup;
 
     private QuizController quizController;
-    private Timer timer;
-    private int timeLeft = 30;
+    private Timer timer; // @author Ali Farhan
+    private int timeLeft = 30; // @author Ali Farhan
 
     public QuizGUI(QuizController quizController) {
         this.quizController = quizController;
@@ -43,9 +43,9 @@ public class QuizGUI {
         livesLabel.setBounds(50, 80, 200, 30);
         frame.add(livesLabel);
 
-        timerLabel = new JLabel("Tid: 30");
-        timerLabel.setBounds(500,20, 100, 30);
-        frame.add(timerLabel);
+        timerLabel = new JLabel("Tid: 30"); // @author Ali Farhan
+        timerLabel.setBounds(500,20, 100, 30); // @author Ali Farhan
+        frame.add(timerLabel); // @author Ali Farhan
 
         optionButtons = new JRadioButton[4];
         buttonGroup = new ButtonGroup();
@@ -72,10 +72,10 @@ public class QuizGUI {
                     }
                 }
                 quizController.submitAnswer(selectedOption);
-                resetTimer();
+                resetTimer(); // @author Ali Farhan
             }
         });
-        setupTimer();
+        setupTimer(); // @author Ali Farhan
         frame.setVisible(true);
     }
 
@@ -86,7 +86,7 @@ public class QuizGUI {
             optionButtons[i].setText(options[i]);
             optionButtons[i].setVisible(true);
         }
-        resetTimer();
+        resetTimer(); // @author Ali Farhan
     }
 
     public void hideOptions() {
@@ -95,6 +95,10 @@ public class QuizGUI {
         }
     }
 
+
+    /**
+     * @author Ali Farhan
+     */
     private void setupTimer() {
         timer = new Timer(1000, new ActionListener() {
             @Override
@@ -109,6 +113,10 @@ public class QuizGUI {
         });
     }
 
+
+    /**
+     * @author Ali Farhan
+     */
     public void resetTimer() {
         timeLeft = 30;
         timerLabel.setText("Time left: " + timeLeft);

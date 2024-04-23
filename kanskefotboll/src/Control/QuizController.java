@@ -135,6 +135,10 @@ public class QuizController {
         });
     }
 
+
+    /**
+     * @author Ali Farhan
+     */
     public void handleTimeOut() {
         if(quiz.getCurrentQuestion() != null) {
             player.decreaseLives();
