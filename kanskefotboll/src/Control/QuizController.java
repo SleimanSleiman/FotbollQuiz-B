@@ -27,7 +27,7 @@ public class QuizController {
     public void onStartQuiz(String playerName, String category) {
         loginGUI = null; // Stäng inloggningssidan när quizet börjar
         List<Question> questions = generateQuestionsForCategory(category);
-        player = new Player(playerName, 1);
+        player = new Player(playerName, 3);
         quiz = new Quiz(questions);
         SwingUtilities.invokeLater(new Runnable() {
             @Override
