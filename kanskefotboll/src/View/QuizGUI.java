@@ -39,7 +39,7 @@ public class QuizGUI {
         scoreLabel.setBounds(50, 20, 200, 30);
         frame.add(scoreLabel);
 
-        livesLabel = new JLabel("Lives: 1");
+        livesLabel = new JLabel("Lives: 3");
         livesLabel.setBounds(50, 80, 200, 30);
         frame.add(livesLabel);
 
