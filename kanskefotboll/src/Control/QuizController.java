@@ -14,7 +14,9 @@ public class QuizController {
     private QuizGUI quizGUI;
     private Quiz quiz;
     private Player player;
-
+    /*
+    diasondas
+     */
     public QuizController() {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
