@@ -1,0 +1,9 @@
+Question 1: Who won the UEFA Euro 2020?
+Options: Italy, France, England, Belgium
+Correct Answer Index: 0
+Score: 10
+
+Question 2: Which team has won the most UEFA Champions League titles?
+Options: Real Madrid, Barcelona, Bayern Munich, AC Milan
+Correct Answer Index: 0
+Score: 10

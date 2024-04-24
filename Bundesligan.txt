@@ -1,0 +1,9 @@
+Question 1: Who won the FIFA 2018?
+Options: Palestine, Iraq, Sweden, Turkey
+Correct Answer Index: 2
+Score: 10
+
+Question 2: Best national team?
+Options: Iraq, Palestine, Sweden, Turkey
+Correct Answer Index: 0
+Score: 10

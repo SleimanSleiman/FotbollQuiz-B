@@ -1,0 +1,20 @@
+Question 1: Who is the all-time top scorer in FIFA World Cup history?
+Options: Pelé, Lionel Messi, Cristiano Ronaldo, Miroslav Klose
+Correct Answer Index: 3
+Score: 10
+
+Question 2: Which country hosted the FIFA World Cup in 2014?
+Options: Brazil, Germany, South Africa, Russia
+Correct Answer Index: 0
+Score: 10
+
+Question 3: Which player has won the most Ballon d'Or awards?
+Options: Lionel Messi, Cristiano Ronaldo, Michel Platini, Johan Cruyff
+Correct Answer Index: 0
+Score: 10
+
+Question 4: Who is the manager of Liverpool FC as of 2024?
+Options: Jürgen Klopp, Pep Guardiola, Zinedine Zidane, Carlo Ancelotti
+Correct Answer Index: 0
+Score: 10
+
