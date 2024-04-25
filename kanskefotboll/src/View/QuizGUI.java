@@ -16,7 +16,7 @@ public class QuizGUI {
     private JButton submitButton;
     private JLabel livesLabel;
     private JLabel timerLabel; // @author Ali Farhan
-
+    private JButton exitButton; //@author Manar Majid Hasan Al-Maliki
     private ButtonGroup buttonGroup;
 
     private QuizController quizController;
@@ -61,6 +61,10 @@ public class QuizGUI {
         submitButton.setBounds(250, 300, 100, 40);
         frame.add(submitButton);
 
+        exitButton = new JButton("Avsluta");
+        exitButton.setBounds(370,300,100,40);
+        frame.add(exitButton);
+
         submitButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -75,6 +79,18 @@ public class QuizGUI {
                 resetTimer(); // @author Ali Farhan
             }
         });
+
+        /*
+        En metod som gör så att programmet avslutat när användaren klickar på "avsluta" knappen.
+        @author Manar Majid Hasan Al-Maliki
+         */
+        exitButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0); //Avsluta programmet när kanppen klickas.
+            }
+        });
+
         setupTimer(); // @author Ali Farhan
         frame.setVisible(true);
     }
