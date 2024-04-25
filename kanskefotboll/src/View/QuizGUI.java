@@ -149,5 +149,5 @@ public class QuizGUI {
     }
     public JFrame getFrame() {
         return frame;
-    }
+     }
 }
