@@ -28,6 +28,14 @@ public class Quiz {
     public void moveToNextQuestion() {
         currentQuestionIndex++;
     }
+
+    /**
+     * @Author Ali Farhan
+     */
+    public List<Question> getQuestions() {
+        return questions;
+    }
+
 }
 
 

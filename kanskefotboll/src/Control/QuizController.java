@@ -4,6 +4,8 @@ import Model.Player;
 import Model.Question;
 import View.LoginGUI;
 import View.QuizGUI;
+import View.ResultGUI;
+
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.*;
@@ -14,9 +16,10 @@ public class QuizController {
     private QuizGUI quizGUI;
     private Quiz quiz;
     private Player player;
-    /*
-    diasondas
-     */
+    private String lastSelectedCategory; //@author Ali Farhan
+
+
+
     public QuizController() {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
@@ -27,6 +30,7 @@ public class QuizController {
     }
 
     public void onStartQuiz(String playerName, String category) {
+        this.lastSelectedCategory = category; // @author Ali Farhan
         loginGUI = null; // Stäng inloggningssidan när quizet börjar
         List<Question> questions = generateQuestionsForCategory(category);
         player = new Player(playerName, 3);
@@ -86,9 +90,24 @@ public class QuizController {
         }
     }
 
+
+    /**
+     * @Author Ali Farhan
+     */
     private void endQuiz() {
-        // Implementera logik för att avsluta quizzet och visa resultatet
+        SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                if (quizGUI != null) {
+                    quizGUI.getFrame().dispose();
+                }
+                saveScoreToLeaderboard();
+                new ResultGUI(QuizController.this, player.getScore(), player.getCorrectAnswers(), quiz.getQuestions().size(), player.getName());
+            }
+        });
     }
+
+
 
     private List<Question> generateCategory1Questions() {
         return readQuestionsFromFile("Bundesligan.txt");
@@ -137,12 +156,24 @@ public class QuizController {
      }
      }
 
-    private void restartGame() {
+
+    /**
+     * @Author Ali Farhan
+     */
+    public void restartGame() {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
+                if (quizGUI != null) {
+                    quizGUI.getFrame().dispose();
+                }
+
+                player.resetScore();
+                player.resetLives(3);
+
+                // Skapa och visa LoginGUI igen
                 loginGUI = new LoginGUI(QuizController.this);
-                quizGUI.getFrame().setVisible(false);
+                loginGUI.getFrame().setVisible(true);
             }
         });
     }
@@ -169,4 +200,23 @@ public class QuizController {
             }
         }
     }
+
+
+    /**
+    * @author Ali Farhan
+     */
+    private void saveScoreToLeaderboard() {
+        String filename = "leaderboard.txt";
+        try (FileWriter fw = new FileWriter(filename, true);
+             BufferedWriter bw = new BufferedWriter(fw);
+             PrintWriter out = new PrintWriter(bw)) {
+            out.println(player.getName() + ": " + player.getScore());
+        } catch (IOException e) {
+            System.err.println("Error writing to the leaderboard file: " + e.getMessage());
+        }
+    }
+
+
+
+
 }

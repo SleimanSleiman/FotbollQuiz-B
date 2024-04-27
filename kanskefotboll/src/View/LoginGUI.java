@@ -3,6 +3,7 @@ package View;
 import Control.QuizController;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -55,5 +56,12 @@ public class LoginGUI {
         });
 
         frame.setVisible(true);
+    }
+
+    /**
+     * @Author Ali Farhan
+     */
+    public Component getFrame() {
+        return frame;
     }
 }
