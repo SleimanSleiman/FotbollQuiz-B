@@ -1,7 +1,6 @@
 package Control;
 
 import View.Music;
-import java.awt.*;
 
 public class Main {
     public static void main(String[] args) {
