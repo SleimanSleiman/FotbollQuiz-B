@@ -37,7 +37,7 @@ public class LoginGUI {
         categoryLabel.setBounds(50, 80, 100, 30);
         frame.add(categoryLabel);
 
-        categoryComboBox = new JComboBox<>(new String[]{"Bundesligan", "Allsvenskan", "Laliga"});
+        categoryComboBox = new JComboBox<>(new String[]{"Bundesliga", "Premier League", "Laliga", "Serie A", "Ligue 1"});
         categoryComboBox.setBounds(150, 80, 200, 30);
         frame.add(categoryComboBox);
 

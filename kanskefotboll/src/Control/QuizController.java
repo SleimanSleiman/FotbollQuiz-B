@@ -65,12 +65,16 @@ public class QuizController {
 
     private List<Question> generateQuestionsForCategory(String category) {
         switch (category) {
-            case "Bundesligan":
+            case "Bundesliga":
                 return generateCategory1Questions();
-            case "Allsvenskan":
+            case "Premier League":
                 return generateCategory2Questions();
             case "Laliga":
                 return generateCategory3Questions();
+            case "Serie A":
+                return generateCategory4Questions();
+            case "Ligue 1":
+                return generateCategory5Questions();
             default:
                 return null;
         }
@@ -109,17 +113,17 @@ public class QuizController {
 
 
 
-    private List<Question> generateCategory1Questions() {
-        return readQuestionsFromFile("Bundesligan.txt");
-    }
+    private List<Question> generateCategory1Questions() { return readQuestionsFromFile("Bundesliga.txt"); }
 
     private List<Question> generateCategory2Questions() {
-        return readQuestionsFromFile("Allsvenskan.txt");
+        return readQuestionsFromFile("Premier_League.txt");
     }
 
-    private List<Question> generateCategory3Questions() {
-        return readQuestionsFromFile("Laliga.txt");
-    }
+    private List<Question> generateCategory3Questions() { return readQuestionsFromFile("Laliga.txt"); }
+    private List<Question> generateCategory4Questions() { return readQuestionsFromFile("SerieA.txt"); }
+    private List<Question> generateCategory5Questions() { return readQuestionsFromFile("Ligue1.txt"); }
+
+
 
     private List<Question> readQuestionsFromFile(String filename) {
         List<Question> questions = new ArrayList<>();
