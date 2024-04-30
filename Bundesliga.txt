@@ -23,9 +23,9 @@ Options: Jadon Sancho, Lucas Hernandez, Harry Kane, Matthijs de Ligt
 Correct Answer Index: 2
 Score: 1
 
-Question 6: What team has won
-Options:
-Correct Answer Index:
+Question 6: What team has won the most consecutive Bundesliga titles?
+Options: Bayern Munich, Schalke 04, Werder bremen, Kaiserslautern
+Correct Answer Index: 0
 Score: 1
 
 Question 7: Who is the youngest player to score a hat-trick in Bundesliga?
@@ -33,14 +33,14 @@ Options: Erling Haaland, Youssoufa Moukoko, Walter Bechtold, Gerd Müller
 Correct Answer Index: 2
 Score: 1
 
-Question 8:
-Options:
-Correct Answer Index:
+Question 8: Who won the Bundesliga in the 2023/2024 season?
+Options: Bayern Munich, Bayer Leverkusen, Borussia Dortmund, RB Leipzig
+Correct Answer Index: 1
 Score: 1
 
-Question 9:
-Options:
-Correct Answer Index:
+Question 9: Who is the youngest player to appear in the Bundesliga?
+Options: Florian Wirtz, Jude Bellingham, Jamal Musiala, Youssoufa Moukoko
+Correct Answer Index: 3
 Score: 1
 
 Question 10: Who is the all-time top assist provider in Bundesliga?
@@ -48,102 +48,102 @@ Options: Franck Ribery, Thomas Müller, Marco Reus, Emre Can
 Correct Answer Index: 1
 Score: 1
 
-Question 11:
-Options:
-Correct Answer Index:
+Question 11: The record for the most points in a season was set by Bayern Munich in the 2012/2013 season. How many points did they get?
+Options: 91, 100, 95, 88
+Correct Answer Index: 0
 Score: 1
 
-Question 12:
-Options:
-Correct Answer Index:
+Question 12: Who has played the most games in Bundesliga history?
+Options: Oliver Kahn, Manuel Neuer, Karl-Heinz Körbel, Mats Hummels
+Correct Answer Index: 2
 Score: 1
 
-Question 13:
-Options:
-Correct Answer Index:
+Question 13: What team did Erling Haaland play for in the Bundesliga?
+Options: Borussia Dortmund, Bayern Munich, RB Leipzig, Vfb Stuttgart
+Correct Answer Index: 0
 Score: 1
 
-Question 14:
-Options:
-Correct Answer Index:
+Question 14: Who is the oldest player to play in Bundesliga?
+Options: Franz Beckenbauer, Klaus Fichtel, Jupp Heynckes, Claudio Pizzaro
+Correct Answer Index: 1
 Score: 1
 
-Question 15:
-Options:
-Correct Answer Index:
+Question 15: Tasmania Berlin holds the record for fewest points in a season. How many points did they get?
+Options: 10, 15, 20, 25
+Correct Answer Index: 0
 Score: 1
 
-Question 16:
-Options:
-Correct Answer Index:
+Question 16: What team holds the record for the moat goals scored in a season?
+Options: Bayern Munich, Borussia Dortmund, Hamburger SV, Vfl Wolfsburg
+Correct Answer Index: 0
 Score: 1
 
-Question 17:
-Options:
-Correct Answer Index:
+Question 17: Who has the most appearances as a manager in Bundesliga history?
+Options: Otto Rehhagel, Jürgen Klopp, Jupp Heynckes, Alfred Schultz
+Correct Answer Index: 0
 Score: 1
 
-Question 18:
-Options:
-Correct Answer Index:
+Question 18: Who has scored the most hat-tricks in Bundesliga history?
+Options: Robert Lewandowski, Pierre-Emerick Aubameyang, Gerd Muller, Klaas-Jan Huntelaar
+Correct Answer Index: 2
 Score: 1
 
-Question 19:
-Options:
-Correct Answer Index:
+Question 19: What team in the Bundesliga has the most points in history?
+Options: Kaiserlautern, Bayern Munich, 1860 Munich, FC Nürnberg
+Correct Answer Index: 1
 Score: 1
 
-Question 20:
-Options:
-Correct Answer Index:
+Question 20: Who has the record for most goals scored in a season?
+Options: Gerd Muller, Robert Lewandowski, Alexander Esswein, Deniz Undav
+Correct Answer Index: 1
 Score: 1
 
-Question 21:
-Options:
-Correct Answer Index:
+Question 21: Bayern Munich has the record for most league titles in a row. How many?
+Options: 8, 9, 10, 11
+Correct Answer Index: 3
 Score: 1
 
-Question 22:
-Options:
-Correct Answer Index:
+Question 22: Who is the oldest player to score a hat-trick in the Bundesliga?
+Options: Claudio Pizarro, Miroslav Klose, Gerd Müller, Franz Beckenbauer
+Correct Answer Index: 0
 Score: 1
 
-Question 23:
-Options:
-Correct Answer Index:
+Question 23: The Revierderby is a match between two teams in the Bundesliga. What teams are they?
+Options: Bayern Munich & Borussia Dortmund, Bayern Munich & 1860 Munich, Borussia Dortmund & Schalke 04, Hamburger SV & Kaiserslautern
+Correct Answer Index: 2
 Score: 1
 
-Question 24:
-Options:
-Correct Answer Index:
+Question 24: Who has the Bundesliga record for most goals scored in a single game?
+Options: Halil Altintop, Dieter Müller, Gerd Müller, Robert Lewandowski
+Correct Answer Index: 1
 Score: 1
 
-Question 25:
-Options:
-Correct Answer Index:
+Question 25: What team plays their home games at the Allianz Arena?
+Options: Hamburger SV, Werder Bremen, Bayern Munich, RB Leipzig
+Correct Answer Index: 2
 Score: 1
 
-Question 26:
-Options:
-Correct Answer Index:
+Question 26: Who is the youngest manager in Bundesliga history to make an appearance?
+Options: Julian Nagelsmann, Thomas Tuchel, Marco Rose, Alfred Schultz
+Correct Answer Index: 0
 Score: 1
 
-Question 27:
-Options:
-Correct Answer Index:
+Question 27: The record for the fastest player in Bundesliga history is held by who?
+Options: Alphonso Davies, Jeremiah St. Juste, Karim Adeyemi, Kevin Schade
+Correct Answer Index: 2
 Score: 1
 
-Question 28:
-Options:
-Correct Answer Index:
+Question 28: Who has recieved the most cards in Bundesliga history?
+Options: Luis Gustavo, Stefan Effenberg, Emre Can, Thomas Hitzlsperger
+Correct Answer Index: 1
 Score: 1
 
-Question 29:
-Options:
-Correct Answer Index:
+Question 29: Who is the youngest player to score a goal in Bundesliga?
+Options: Youssoufa Moukoko, Thomas Müller, Miroslav Klose, Hans-Jorg Butt
+Correct Answer Index: 0
 Score: 1
 
-Question 30:
-Options:
-Correct Answer Index:
+Question 30: Who ha the record for most assists in a season?
+Options: Kevin De Bruyne, Mesut Özil, Franck Ribery, Thomas Müller
+Correct Answer Index: 3
 Score: 1

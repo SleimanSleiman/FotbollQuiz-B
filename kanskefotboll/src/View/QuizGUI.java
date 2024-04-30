@@ -28,11 +28,11 @@ public class QuizGUI {
 
         frame = new JFrame("Quiz Application");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(600, 400);
+        frame.setSize(870, 400);
         frame.setLayout(null);
 
         questionLabel = new JLabel();
-        questionLabel.setBounds(50, 50, 500, 30);
+        questionLabel.setBounds(50, 50, 800, 30);
         frame.add(questionLabel);
 
         scoreLabel = new JLabel("Score: 0");
