@@ -73,7 +73,7 @@ Options: 10, 15, 20, 25
 Correct Answer Index: 0
 Score: 1
 
-Question 16: What team holds the record for the moat goals scored in a season?
+Question 16: What team holds the record for the most goals scored in a season?
 Options: Bayern Munich, Borussia Dortmund, Hamburger SV, Vfl Wolfsburg
 Correct Answer Index: 0
 Score: 1

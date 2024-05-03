@@ -1,149 +1,149 @@
-Question 1:
-Options:
-Correct Answer Index:
+Question 1: Who won the Serie A in the 2023/2024 season?
+Options: Juventus, Inter, Ac Milan, Napoli
+Correct Answer Index: 1
 Score: 1
 
-Question 2:
-Options:
-Correct Answer Index:
+Question 2: Who was the top scorer in the 2022/2023 Serie A season?
+Options: Dusan Vlahovic, Victor Osimhen, Romelu Lukaku, Lautaro Martinez
+Correct Answer Index: 1
 Score: 1
 
-Question 3:
-Options:
-Correct Answer Index:
+Question 3: Which team has won the most Serie A titles?
+Options: Inter, AC Milan, Juventus, AS Roma
+Correct Answer Index: 2
 Score: 1
 
-Question 4:
-Options:
-Correct Answer Index:
+Question 4: How many teams play in the Serie A?
+Options: 20, 18, 16, 19
+Correct Answer Index: 0
 Score: 1
 
-Question 5:
-Options:
-Correct Answer Index:
+Question 5: In what team did Zinedine Zidane play?
+Options: AC Milan, Inter, Lazio, Juventus
+Correct Answer Index: 3
 Score: 1
 
-Question 6:
-Options:
-Correct Answer Index:
+Question 6: Who has scored the most goals in Serie A history?
+Options: Silvio Piola, Francesco Totti, Gunnar Nordahl, David Trezeguet
+Correct Answer Index: 0
 Score: 1
 
-Question 7:
-Options:
-Correct Answer Index:
+Question 7: What team play their home games at San siro?
+Options: Inter, AC Milan, SSC Napoli, Juventus
+Correct Answer Index: 1
 Score: 1
 
-Question 8:
-Options:
-Correct Answer Index:
+Question 8: Who is the oldest player to score in Serie A?
+Options: Zlatan Ibrahimovic, Franscesco Totti, Miroslav Klose, Amedeo Amadei
+Correct Answer Index: 0
 Score: 1
 
-Question 9:
-Options:
-Correct Answer Index:
+Question 9: Who has make the most appearances in Serie A history?
+Options:  Paolo Maldini, Gianluigi Buffon, Francesco Totti, Javier Zanetti
+Correct Answer Index: 1
 Score: 1
 
-Question 10:
-Options:
-Correct Answer Index:
+Question 10: Who has made the most appearances as a manager in Serie A history?
+Options: Carlo Mazzone, Max Allegri, Fabio Capello, Luciano Spalletti
+Correct Answer Index: 0
 Score: 1
 
-Question 11:
-Options:
-Correct Answer Index:
+Question 11: Which player has won the most Serie A titles?
+Options: Paolo Maldini, Giorgio Chiellini, Gianluigi Buffon, Dejan Stankovic
+Correct Answer Index: 2
 Score: 1
 
-Question 12:
-Options:
-Correct Answer Index:
+Question 12: Which player has scored the most free kick goals in Serie A history?
+Options: Miralem Pjanic, Gianfranco Zola, Andrea Pirlo, Sinisa Mihajlovic
+Correct Answer Index: 3
 Score: 1
 
-Question 13:
-Options:
-Correct Answer Index:
+Question 13: What team is called the Rossoneri?
+Options: Inter, Juventus, AC Milan, AS Roma
+Correct Answer Index: 2
 Score: 1
 
-Question 14:
-Options:
-Correct Answer Index:
+Question 14: Who made the most assists in Serie A during the 2022/2023 season?
+Options: Hakan Calhanoglu, Dusan Vlahovic, Nicolo Barella, Khvicha Kvaratskhelia
+Correct Answer Index: 3
 Score: 1
 
-Question 15:
-Options:
-Correct Answer Index:
+Question 15: What player has recieved the most red cards in Serie A history?
+Options: Marco Materazzi, Paolo Montero, Daniele De Rossi, Massimo Ambrosini
+Correct Answer Index: 1
 Score: 1
 
-Question 16:
-Options:
-Correct Answer Index:
+Question 16: Who has held the most clean sheets in Serie A history?
+Options: Gianluigi Buffon, Ivan Provedel, Samir Handanovic, Dida
+Correct Answer Index: 0
 Score: 1
 
-Question 17:
-Options:
-Correct Answer Index:
+Question 17: Who has scored the most hat-tricks in Serie A history?
+Options: Gunnar Nordahl, Giuseppe Meazza, Kurt Hamrin, Pippo Inzaghi
+Correct Answer Index: 0
 Score: 1
 
-Question 18:
-Options:
-Correct Answer Index:
+Question 18: Who has won the most Serie A titles as a manager?
+Options: Carlo Ancelotti, Fabio Capello, Giovanni Trapattoni, Max Allegri
+Correct Answer Index: 2
 Score: 1
 
-Question 19:
-Options:
-Correct Answer Index:
+Question 19: Franscesco Totti has made the most appearances for which team?
+Options: Lazio, SSC Napoli, Parma, AS Roma
+Correct Answer Index: 3
 Score: 1
 
-Question 20:
-Options:
-Correct Answer Index:
+Question 20: Which of these players played for a Serie A team when they won the Ballon d'or?
+Options: Luis Figo, Cristiano Ronaldo, Ronaldinho, Lothar Matthäus
+Correct Answer Index: 3
 Score: 1
 
-Question 21:
-Options:
-Correct Answer Index:
+Question 21: Rafael Leao scored the fastest goal in Serie A history in 2021, how many seconds did it take?
+Options: 6.2 seconds, 7.2 seconds, 11.3 seconds, 12.6 seconds
+Correct Answer Index: 0
 Score: 1
 
-Question 22:
-Options:
-Correct Answer Index:
+Question 22: Who has the record for the most assists in Serie A history?
+Options: Roberto Baggio, Alesssandro Del Piero, Franscesco Totti, Antonio Cassano
+Correct Answer Index: 2
 Score: 1
 
-Question 23:
-Options:
-Correct Answer Index:
+Question 23: Maurizio Pugliesi has the record for being the oldest player to make their Serie A debut, how old was he?
+Options: 39 years, 41 years, 37 years, 43 years
+Correct Answer Index: 0
 Score: 1
 
-Question 24:
-Options:
-Correct Answer Index:
+Question 24: What number did Diego Maradona have in SSC Napoli?
+Options: 7, 10, 11, 14
+Correct Answer Index: 1
 Score: 1
 
-Question 25:
-Options:
-Correct Answer Index:
+Question 25: Which team has the record for the most consecutive Serie A titles?
+Options: Inter, Torino, Juventus, Bologna
+Correct Answer Index: 2
 Score: 1
 
-Question 26:
-Options:
-Correct Answer Index:
+Question 26: Who is the oldest goalscorer in the derby della Madonnina?
+Options: Zlatan Ibrahimovic, Adriano, Olivier Giroud, Paolo Maldini
+Correct Answer Index: 0
 Score: 1
 
-Question 27:
-Options:
-Correct Answer Index:
+Question 27: What team did Gianluigi Buffon play for before he joined Juventus?
+Options: Atalanta, Parma, AC Milan, Lazio
+Correct Answer Index: 1
 Score: 1
 
-Question 28:
-Options:
-Correct Answer Index:
+Question 28: Who is the oldest player to win Serie A top scorer award?
+Options: Luca Toni, Christian Vieri, Francesco Totti, Olivier Giroud
+Correct Answer Index: 0
 Score: 1
 
-Question 29:
-Options:
-Correct Answer Index:
+Question 29: What number does Moise Kean have in Juventus?
+Options: 10, 27, 18, 9
+Correct Answer Index: 2
 Score: 1
 
-Question 30:
-Options:
-Correct Answer Index:
+Question 30: Who is the oldest player to score a hat-trick in Serie A?
+Options: Francesco Totti, Alessandro Del Piero, Zlatan Ibrahimović, Rodrigo Palacio
+Correct Answer Index: 3
 Score: 1
