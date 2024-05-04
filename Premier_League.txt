@@ -1,9 +1,149 @@
-Question 1: Who won the UEFA Euro 2020?
-Options: Italy, France, England, Belgium
-Correct Answer Index: 0
-Score: 10
+Question 1: Who was the top scorer in the Premier league during the 2022/2023 season?
+Options: Alexander Isak, Harry Kane, Erling Haaland, Mohamed Salah
+Correct Answer Index: 2
+Score: 1
 
-Question 2: Which team has won the most UEFA Champions League titles?
-Options: Real Madrid, Barcelona, Bayern Munich, AC Milan
+Question 2: Which team won the Premier league during the 2021/2022 season?
+Options: Arsenal, Manchester City, Liverpool, Chelsea
+Correct Answer Index: 1
+Score: 1
+
+Question 3: What team has won the most Premier league titles?
+Options: Manchester United, Arsenal, Liverpool, Portsmouth
 Correct Answer Index: 0
-Score: 10
+Score: 1
+
+Question 4: Which player has the record for most appearances in the Premier league?
+Options: Ryan Giggs, Steven Gerrard, Frank Lampard, Gareth Barry
+Correct Answer Index: 3
+Score: 1
+
+Question 5: Marcus Bent has the record for the most clubs played for in the Premier league. How many clubs did he play for?
+Options: 10, 9, 8, 7
+Correct Answer Index: 2
+Score: 1
+
+Question 6: Who is the youngest player to make an appearance in the Premier league?
+Options: Harvey Elliot, Marko Grujic, Ethan Nwaneri, Carney Chukwuemeka
+Correct Answer Index: 2
+Score: 1
+
+Question 7: What team managed to win the Premier league without losing a single game?
+Options: Chelsea, Arsenal, Manchester United, Manchester City
+Correct Answer Index: 1
+Score: 1
+
+Question 8: What player has scored the most Premier league goals?
+Options: Wayne Rooney, Alan Shearer, Thierry Henry, Sergio Aguero
+Correct Answer Index: 1
+Score: 1
+
+Question 9: What manager won the treble with Manchester United in the 1998/1999 season?
+Options: Arsene Wenger, Roy Hodgson, Sam Allardyce, Alex Ferguson
+Correct Answer Index: 3
+Score: 1
+
+Question 10: Who has held the most clean sheets in the Premier league history?
+Options: Petr Cech, David De Gea, David Seaman, Pepe Reina
+Correct Answer Index: 0
+Score: 1
+
+Question 11: Richard Dunne, Duncan Ferguson and Patrick Vieira all hold the record for the most red cards in Premier league. How many?
+Options: 10, 8, 12, 9
+Correct Answer Index: 1
+Score: 1
+
+Question 12: Which player has scored the most hat-tricks in the Premier league history?
+Options: Harry Kane, Cristiano Ronaldo, Sergio Aguero, Teddy Sheringham
+Correct Answer Index: 2
+Score: 1
+
+Question 13: What team play their home games at Anfield?
+Options: Manchester United, Arsenal, Newcastle United, Liverpool
+Correct Answer Index: 3
+Score: 1
+
+Question 14: Jamie Vardy has the record for the most goals scored in consecutive Premier league games. How many?
+Options: 13, 12, 11, 10
+Correct Answer Index: 2
+Score: 1
+
+Question 15: Pep Guardiola is the manager for what team?
+Options: Manchester United, Manchester City, Chelsea, Arsenal
+Correct Answer Index: 1
+Score: 1
+
+Question 16: What color is Arsenal's home kit?
+Options: Red, White, Blue, Black
+Correct Answer Index: 0
+Score: 1
+
+Question 17: Sadio Mané has the record for the fastest hat-trick in Premier league history. How long did it take him?
+Options: 2 minutes 56 seconds, 3 minutes 42 seconds, 2 minutes 36 seconds, 4 minutes 30 seconds
+Correct Answer Index: 0
+Score: 1
+
+Question 18: What swedish player has scored the most goals in the Premier league?
+Options: Henrik Larsson, Fredrik Ljungberg, Zlatan Ibrahimovic, Alexander Isak
+Correct Answer Index: 3
+Score: 1
+
+Question 19: Which team has the record for the fewest points in a Premier league season?
+Options: Derby County, Sunderland, Huddersfield Town, Watford
+Correct Answer Index: 0
+Score: 1
+
+Question 20: For what Premier league team did Marouane Chamakh play for?
+Options: Luton Town, Fulham, Sunderland, Arsenal
+Correct Answer Index: 3
+Score: 1
+
+Question 21: John Burridge is the oldest player to make an appearance in the Premier league. How old was he?
+Options: 43 years 162 days, 42 years 342 days, 44 years 183 days, 41 years 182 days
+Correct Answer Index: 0
+Score: 1
+
+Question 22: Which player has scored the most goals in a single Premier league season?
+Options: Alan Shearer, Mohammed Salah, Thierry Henry, Erling Haaland
+Correct Answer Index: 3
+Score: 1
+
+Question 23: Who has recieved the most yellow cards in Premier league history?
+Options: Lee Cattermole, Paul Scholes, Michael Carrick, Gareth Barry
+Correct Answer Index: 3
+Score: 1
+
+Question 24: Who is the oldest player to score in the Premier league?
+Options: Teddy Sheringham, Ryan Giggs, Peter Shilton, Gordon Strachan
+Correct Answer Index: 0
+Score: 1
+
+Question 25: What two teams are a part of the "North London Derby"?
+Options: Arsenal & Chelsea, Arsenal & Tottenham Hotspur, Crystal Palace & Fulham, Chelsea & Tottenham Hotspur
+Correct Answer Index: 1
+Score: 1
+
+Question 26: Which player has scored the most free kicks in the Premier league?
+Options: David Beckham, James Ward-Prowse, Sebastian Larsson, Cristiano Ronaldo
+Correct Answer Index: 0
+Score: 1
+
+Question 27: Who is the youngest to score a hat-trick in the Premier league?
+Options: Robbie Fowler, Phil Foden, Cole Palmer, Michael Owen
+Correct Answer Index: 3
+Score: 1
+
+Question 28: Which player has made the most assists in Premier league history?
+Options: Cesc Fabregas, Kevin De Bruyne, Ryan Giggs, David Silva
+Correct Answer Index: 2
+Score: 1
+
+Question 29: What team is called the "Red Devils"?
+Options: Arsenal, Manchester United, Liverpool, Sheffield United
+Correct Answer Index: 1
+Score: 1
+
+Question 30: Who is the oldest player to make an appearance in the Premier league?
+Options: John Burridge, Mark Schwarzer, Brad Friedel, Maarten Stekelenburg
+Correct Answer Index: 0
+Score: 1
