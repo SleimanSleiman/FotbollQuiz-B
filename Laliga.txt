@@ -120,7 +120,7 @@ Score: 1
 
 Question 25: What player has scored the most hat-tricks in Laliga history?
 Options: Cristiano Ronaldo, Lionel Messi, Karim Benzema, Alfredo Di Stefano
-Correct Answer Index: 1
+Correct Answer Index: 3
 Score: 1
 
 Question 26: How many goals did Lionel Messi score in Laliga during the 2011/2012 season?
