@@ -2,11 +2,13 @@ package View;
 
 import Control.QuizController;
 import Model.Question;
-
+import Model.Music;
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.Timer;
+import javax.swing.plaf.ColorUIResource;
 
 public class QuizGUI {
     private JFrame frame;
@@ -25,26 +27,27 @@ public class QuizGUI {
 
     public QuizGUI(QuizController quizController) {
         this.quizController = quizController;
+        UIManager.put("RadioButton.focus", new ColorUIResource(new Color(0xC0FFC1)));
 
         frame = new JFrame("Quiz Application");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(870, 400);
+        frame.setSize(850, 400);
         frame.setLayout(null);
-
+        frame.getContentPane().setBackground(new Color(192, 255, 193));
         questionLabel = new JLabel();
         questionLabel.setBounds(50, 50, 800, 30);
         frame.add(questionLabel);
 
         scoreLabel = new JLabel("Score: 0");
-        scoreLabel.setBounds(50, 20, 200, 30);
+        scoreLabel.setBounds(400, 20, 200, 30);
         frame.add(scoreLabel);
 
         livesLabel = new JLabel("Lives: 3");
-        livesLabel.setBounds(50, 80, 200, 30);
+        livesLabel.setBounds(50, 20, 200, 30);
         frame.add(livesLabel);
 
         timerLabel = new JLabel("Tid: 30"); // @author Ali Farhan
-        timerLabel.setBounds(500,20, 100, 30); // @author Ali Farhan
+        timerLabel.setBounds(700,20, 100, 30); // @author Ali Farhan
         frame.add(timerLabel); // @author Ali Farhan
 
         optionButtons = new JRadioButton[4];
@@ -53,16 +56,23 @@ public class QuizGUI {
         for (int i = 0; i < optionButtons.length; i++) {
             optionButtons[i] = new JRadioButton();
             optionButtons[i].setBounds(50, 100 + i * 50, 500, 30);
+            optionButtons[i].setForeground(Color.WHITE);
+            optionButtons[i].setBackground(Color.black);
             frame.add(optionButtons[i]);
             buttonGroup.add(optionButtons[i]);
         }
 
         submitButton = new JButton("Submit");
         submitButton.setBounds(250, 300, 100, 40);
+        submitButton.setBackground(new Color(12, 12, 12));
+        submitButton.setForeground(Color.WHITE);
         frame.add(submitButton);
+
 
         exitButton = new JButton("Avsluta");
         exitButton.setBounds(370,300,100,40);
+        exitButton.setBackground(new Color(12, 12, 12));
+        exitButton.setForeground(Color.WHITE);
         frame.add(exitButton);
 
         submitButton.addActionListener(new ActionListener() {
