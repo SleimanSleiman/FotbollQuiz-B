@@ -1,9 +1,3 @@
-
-Question 11: The record for the most points in a season was set by Bayern Munich in the 2012/2013 season. How many points did they get?
-Options: 91, 100, 95, 88
-Correct Answer Index: 0
-Score: 1
-
 Question 1: How many teams are there in Bundesliga?
 Options: 16, 18, 20, 22
 Correct Answer Index: 1
@@ -52,6 +46,11 @@ Score: 1
 Question 10: Who is the all-time top assist provider in Bundesliga?
 Options: Franck Ribery, Thomas Müller, Marco Reus, Emre Can
 Correct Answer Index: 1
+Score: 1
+
+Question 11: The record for the most points in a season was set by Bayern Munich in the 2012/2013 season. How many points did they get?
+Options: 91, 100, 95, 88
+Correct Answer Index: 0
 Score: 1
 
 Question 12: Who has played the most games in Bundesliga history?
