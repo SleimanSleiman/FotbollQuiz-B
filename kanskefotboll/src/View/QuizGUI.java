@@ -56,23 +56,23 @@ public class QuizGUI {
         for (int i = 0; i < optionButtons.length; i++) {
             optionButtons[i] = new JRadioButton();
             optionButtons[i].setBounds(50, 100 + i * 50, 500, 30);
-            optionButtons[i].setForeground(Color.WHITE);
-            optionButtons[i].setBackground(Color.black);
+            optionButtons[i].setForeground(Color.BLACK);
+            optionButtons[i].setBackground(new Color(0xC0FFC1));
             frame.add(optionButtons[i]);
             buttonGroup.add(optionButtons[i]);
         }
 
         submitButton = new JButton("Submit");
-        submitButton.setBounds(250, 300, 100, 40);
-        submitButton.setBackground(new Color(12, 12, 12));
-        submitButton.setForeground(Color.WHITE);
+        submitButton.setBounds(300, 300, 100, 40);
+        submitButton.setBackground(new Color(255, 255, 255));
+        submitButton.setForeground(Color.BLACK);
         frame.add(submitButton);
 
 
         exitButton = new JButton("Avsluta");
-        exitButton.setBounds(370,300,100,40);
-        exitButton.setBackground(new Color(12, 12, 12));
-        exitButton.setForeground(Color.WHITE);
+        exitButton.setBounds(450,300,100,40);
+        exitButton.setBackground(new Color(255, 255, 255));
+        exitButton.setForeground(Color.BLACK);
         frame.add(exitButton);
 
         submitButton.addActionListener(new ActionListener() {

@@ -47,8 +47,8 @@ public class LoginGUI {
 
         startButton = new JButton("Start Quiz");
         startButton.setBounds(250, 180, 100, 40);
-        startButton.setBackground(new Color(12, 12, 12, 255));
-        startButton.setForeground(Color.WHITE);
+        startButton.setBackground(new Color(255, 255, 255, 255));
+        startButton.setForeground(Color.black);
         frame.add(startButton);
 
         startButton.addActionListener(new ActionListener() {
