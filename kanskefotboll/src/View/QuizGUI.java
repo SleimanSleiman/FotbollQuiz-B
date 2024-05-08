@@ -60,6 +60,7 @@ public class QuizGUI {
             optionButtons[i].setBackground(new Color(0xC0FFC1));
             frame.add(optionButtons[i]);
             buttonGroup.add(optionButtons[i]);
+
         }
 
         submitButton = new JButton("Submit");
@@ -148,7 +149,6 @@ public class QuizGUI {
         timerLabel.setText("Time left: " + timeLeft);
         timer.start();
     }
-
 
     public void updateScore(int score) {
         scoreLabel.setText("Score: " + score);
