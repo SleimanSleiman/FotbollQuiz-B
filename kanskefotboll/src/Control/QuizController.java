@@ -156,8 +156,6 @@ public class QuizController {
 
     private void showLossDialog() {
         JPanel panel = new JPanel();
-        panel.setBackground(new Color(0xC0FFC1));
-
         JLabel messageLabel = new JLabel("You have lost, do you want to play again?");
         messageLabel.setForeground(new Color(0x0C0C0C));
         panel.add(messageLabel);
