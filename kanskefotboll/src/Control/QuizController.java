@@ -7,9 +7,11 @@ import View.LoginGUI;
 import View.QuizGUI;
 import View.ResultGUI;
 
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.*;
+import javax.swing.plaf.ColorUIResource;
 import java.io.*;
 
 public class QuizController {
@@ -153,14 +155,33 @@ public class QuizController {
     }
 
     private void showLossDialog() {
-     int choice = JOptionPane.showConfirmDialog(null, "You have lost, do you wanna play again?", "Game over", JOptionPane.YES_NO_OPTION);
-     if(choice == JOptionPane.YES_OPTION){
-            restartGame();
-     } else {
-         endQuiz();
+        JPanel panel = new JPanel();
+        panel.setBackground(new Color(0xC0FFC1));
 
-     }
-     }
+        JLabel messageLabel = new JLabel("You have lost, do you want to play again?");
+        messageLabel.setForeground(new Color(0x0C0C0C));
+        panel.add(messageLabel);
+
+        JButton yesButton = new JButton("Yes");
+        yesButton.setBackground(new Color(0xFFFFFF));
+        yesButton.setForeground(new Color(0x0C0C0C));
+
+        JButton noButton = new JButton("No");
+        noButton.setBackground(new Color(0xFFFFFF));
+        noButton.setForeground(new Color(0x0C0C0C));
+
+
+        int choice = JOptionPane.showOptionDialog(null, panel, "Game over", JOptionPane.YES_NO_OPTION,
+                JOptionPane.PLAIN_MESSAGE, null, new JButton[]{yesButton, noButton}, null);
+
+        if (choice == JOptionPane.YES_OPTION) {
+            restartGame();
+        } else {
+            endQuiz();
+        }
+    }
+
+
 
 
 

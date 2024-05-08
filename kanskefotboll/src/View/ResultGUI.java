@@ -3,6 +3,7 @@ package View;
 import Control.QuizController;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.BufferedReader;
@@ -28,28 +29,34 @@ public class ResultGUI {
         this.quizController = quizController;
 
         frame = new JFrame("Quiz Result for " + playerName);
-        frame.setSize(300, 200);
+        frame.setSize(400, 250);
         frame.setLayout(null);
+        frame.getContentPane().setBackground(new Color(0xC0FFC1)); // Set background color here
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         scoreLabel = new JLabel("Your Score: " + score + " / " + totalQuestions);
-        scoreLabel.setBounds(50, 30, 200, 30);
+        scoreLabel.setBounds(140, 40, 200, 30);
         frame.add(scoreLabel);
 
         JLabel correctLabel = new JLabel("Correct answers: " + correctAnswers + " / " + totalQuestions);
-        correctLabel.setBounds(50, 60, 200, 30);
+        correctLabel.setBounds(120, 60, 200, 30);
         frame.add(correctLabel);
 
         restartButton = new JButton("Play again");
-        restartButton.setBounds(50, 100, 100, 30);
+        restartButton.setBounds(90, 120, 100, 30);
+        restartButton.setBackground(new Color(0xFFFFFF));
+        restartButton.setForeground(new Color(0x0C0C0C));
         frame.add(restartButton);
 
         exitButton = new JButton("Avsluta");
-        exitButton.setBounds(160, 100, 100, 30);
+        exitButton.setBounds(200, 120, 100, 30);
+        exitButton.setBackground(new Color(0xFFFFFF));
         frame.add(exitButton);
 
         leaderboardButton = new JButton("Show Leaderboard");
-        leaderboardButton.setBounds(50, 140, 200, 30);
+        leaderboardButton.setBounds(100, 170, 190, 30);
+        leaderboardButton.setForeground(new Color(0x0C0C0C));
+        leaderboardButton.setBackground(new Color(0xFFFFFF));
         frame.add(leaderboardButton);
 
         restartButton.addActionListener(new ActionListener() {
