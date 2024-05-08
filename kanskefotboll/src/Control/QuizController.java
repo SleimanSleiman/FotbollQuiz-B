@@ -155,11 +155,14 @@ public class QuizController {
     private void showLossDialog() {
      int choice = JOptionPane.showConfirmDialog(null, "You have lost, do you wanna play again?", "Game over", JOptionPane.YES_NO_OPTION);
      if(choice == JOptionPane.YES_OPTION){
-         restartGame();
-     } else{
-         System.exit(0);
+            restartGame();
+     } else {
+         endQuiz();
+
      }
      }
+
+
 
 
     /**
