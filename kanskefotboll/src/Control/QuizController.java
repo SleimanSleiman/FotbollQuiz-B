@@ -188,7 +188,7 @@ public class QuizController {
      * @author Ali Farhan
      */
     public void handleTimeOut() {
-        if(quiz.getCurrentQuestion() != null) {
+        if (quiz.getCurrentQuestion() != null) {
             player.decreaseLives();
             checkPlayerStatus();
 
@@ -200,9 +200,10 @@ public class QuizController {
                         showNextQuestion();
                     }
                 });
-                } else {
+            } else {
                 endQuiz();
             }
+            quizGUI.updateLives(player.getLives()); // Uppdatera GUI med antalet liv
         }
     }
 
