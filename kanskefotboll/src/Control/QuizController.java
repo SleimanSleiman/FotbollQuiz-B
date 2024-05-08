@@ -2,6 +2,7 @@ package Control;
 
 import Model.Player;
 import Model.Question;
+import Model.Quiz;
 import View.LoginGUI;
 import View.QuizGUI;
 import View.ResultGUI;
