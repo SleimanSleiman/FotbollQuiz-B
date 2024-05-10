@@ -148,12 +148,22 @@ public class QuizController {
         return questions;
     }
 
+
+    /**
+     * Kontrollera spelarens status i spelet
+     * @Author Ali Farhan och Elias Celyir
+     */
     private void checkPlayerStatus(){
         if(player.getLives() <= 0){
-            showLossDialog();
+            endQuiz();
         }
     }
 
+
+
+    // Problemet med gamla gui som dyker upp var här, kan tas bort helt efter vi kontrollerat med resterande i gruppen
+    // Problemet löst av Ali och Elias
+    /*
     private void showLossDialog() {
         JPanel panel = new JPanel();
         JLabel messageLabel = new JLabel("You have lost, do you want to play again?");
@@ -178,7 +188,7 @@ public class QuizController {
             endQuiz();
         }
     }
-
+    */
 
 
 
