@@ -46,7 +46,7 @@ public class QuizGUI {
         livesLabel.setBounds(50, 20, 200, 30);
         frame.add(livesLabel);
 
-        timerLabel = new JLabel("Tid: 30"); // @author Ali Farhan
+        timerLabel = new JLabel("Time: 30"); // @author Ali Farhan
         timerLabel.setBounds(700,20, 100, 30); // @author Ali Farhan
         frame.add(timerLabel); // @author Ali Farhan
 
@@ -70,7 +70,7 @@ public class QuizGUI {
         frame.add(submitButton);
 
 
-        exitButton = new JButton("Avsluta");
+        exitButton = new JButton("Exit");
         exitButton.setBounds(450,300,100,40);
         exitButton.setBackground(new Color(255, 255, 255));
         exitButton.setForeground(Color.BLACK);
@@ -103,6 +103,8 @@ public class QuizGUI {
         });
 
         setupTimer(); // @author Ali Farhan
+
+        frame.setLocationRelativeTo(null); // Centrera GUI @Author Ali Farhan & Elias Celyir
         frame.setVisible(true);
     }
 

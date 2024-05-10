@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="43f76da9-61f4-4192-a5d6-b99a11743aad" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kanskefotboll/src/Control/QuizController.java" beforeDir="false" afterPath="$PROJECT_DIR$/kanskefotboll/src/Control/QuizController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kanskefotboll/src/View/LoginGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/kanskefotboll/src/View/LoginGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kanskefotboll/src/View/QuizGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/kanskefotboll/src/View/QuizGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kanskefotboll/src/View/ResultGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/kanskefotboll/src/View/ResultGUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/leaderboard.txt" beforeDir="false" afterPath="$PROJECT_DIR$/leaderboard.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,7 +48,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "Problem-GUI",
+    "git-widget-placeholder": "CentreraGUI",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",

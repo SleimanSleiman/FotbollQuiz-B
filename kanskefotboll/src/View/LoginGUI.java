@@ -61,6 +61,8 @@ public class LoginGUI {
             }
         });
 
+        frame.setLocationRelativeTo(null); // Centrera GUI @Author Ali Farhan & Elias Celyir
+
         frame.setVisible(true);
     }
 
