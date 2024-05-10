@@ -61,12 +61,22 @@ public class QuizGUI {
             frame.add(optionButtons[i]);
             buttonGroup.add(optionButtons[i]);
 
+
+           //@author Ali Farhan
+            optionButtons[i].addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    submitButton.setEnabled(true);
+                }
+            });
+
         }
 
         submitButton = new JButton("Submit");
         submitButton.setBounds(300, 300, 100, 40);
         submitButton.setBackground(new Color(255, 255, 255));
         submitButton.setForeground(Color.BLACK);
+        submitButton.setEnabled(false); //@author Ali Farhan
         frame.add(submitButton);
 
 
@@ -86,7 +96,8 @@ public class QuizGUI {
                         break;
                     }
                 }
-                quizController.submitAnswer(selectedOption);
+                quizController.submitAnswer(selectedOption); //@author Ali Farhan
+                submitButton.setEnabled(false); //@Author Ali Farhan
                 resetTimer(); // @author Ali Farhan
             }
         });
@@ -111,6 +122,11 @@ public class QuizGUI {
     public void showQuestion(Question question) {
         questionLabel.setText(question.getText());
         String[] options = question.getOptions();
+
+        buttonGroup.clearSelection(); // Ta bort tidigare val innan nästa fråga visas @author Ali Farhan
+        submitButton.setEnabled(false); // @author Ali Farhan
+
+
         for (int i = 0; i < optionButtons.length; i++) {
             optionButtons[i].setText(options[i]);
             optionButtons[i].setVisible(true);
