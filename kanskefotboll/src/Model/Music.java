@@ -4,7 +4,7 @@ import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import java.io.File;
-
+//@author Sleiman Sleiman
 public class Music {
     private Clip backgroundMusic;
 

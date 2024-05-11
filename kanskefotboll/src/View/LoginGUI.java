@@ -8,6 +8,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+
 public class LoginGUI {
     private JFrame frame;
     private JLabel nameLabel;
@@ -15,6 +16,8 @@ public class LoginGUI {
     private JLabel categoryLabel;
     private JComboBox<String> categoryComboBox;
     private JButton startButton;
+    private JButton settingsButton;
+
 
     private QuizController quizController;
 
@@ -51,6 +54,12 @@ public class LoginGUI {
         startButton.setForeground(Color.black);
         frame.add(startButton);
 
+        settingsButton = new JButton("Settings");
+        settingsButton.setBounds(470, 180, 100, 40);
+        settingsButton.setBackground(new Color(255, 255, 255));
+        settingsButton.setForeground(Color.BLACK);
+        frame.add(settingsButton);
+
         startButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -66,10 +75,23 @@ public class LoginGUI {
         frame.setVisible(true);
     }
 
+   settingsButton.addActionListener(new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            openSettings(); // Define openSettings() method to handle settings opening
+        }
+    }
+    );
+
+    private void openSettings() {
+
+
     /**
      * @Author Ali Farhan
      */
     public Component getFrame() {
         return frame;
     }
+    }
+
 }

@@ -80,7 +80,7 @@ public class QuizController {
                 return generateCategory5Questions();
             default:
                 return null;
-        }
+        }//@author Sleiman Sleiman
     }
 
     private void showNextQuestion() {
@@ -125,7 +125,7 @@ public class QuizController {
     private List<Question> generateCategory3Questions() { return readQuestionsFromFile("Laliga.txt"); }
     private List<Question> generateCategory4Questions() { return readQuestionsFromFile("SerieA.txt"); }
     private List<Question> generateCategory5Questions() { return readQuestionsFromFile("Ligue1.txt"); }
-
+//@author Sleiman Sleiman
 
 
     private List<Question> readQuestionsFromFile(String filename) {
@@ -146,7 +146,7 @@ public class QuizController {
             e.printStackTrace();
         }
         return questions;
-    }
+    } //@author Sleiman Sleiman
 
 
     /**
