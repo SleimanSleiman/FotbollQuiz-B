@@ -7,7 +7,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import View.SettingsGUI;
+import Model.Music;
 
 
 public class LoginGUI {
@@ -18,7 +18,7 @@ public class LoginGUI {
     private JComboBox<String> categoryComboBox;
     private JButton startButton;
     private JButton settingsButton;
-
+    private Music music;
 
     private QuizController quizController;
 
@@ -83,8 +83,9 @@ public class LoginGUI {
         frame.setVisible(true);
     }
 
+
     private void openSettingsWindow() {
-        SettingsGUI settingsGUI = new SettingsGUI();
+        SettingsGUI settingsGUI = new SettingsGUI(music);
         settingsGUI.displaySettings();
     }
 

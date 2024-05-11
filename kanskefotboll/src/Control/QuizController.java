@@ -6,7 +6,8 @@ import Model.Quiz;
 import View.LoginGUI;
 import View.QuizGUI;
 import View.ResultGUI;
-
+import View.SettingsGUI;
+import Model.Music;
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +21,7 @@ public class QuizController {
     private Quiz quiz;
     private Player player;
     private String lastSelectedCategory; //@author Ali Farhan
-
+    private Music music;
 
 
     public QuizController() {
@@ -47,6 +48,9 @@ public class QuizController {
         });
     }
 
+    public Music getMusic() {
+        return music;
+    }
     public void submitAnswer(int selectedOption) {
         Question currentQuestion = quiz.getCurrentQuestion();
         if (currentQuestion != null) {
@@ -159,6 +163,10 @@ public class QuizController {
         }
     }
 
+    private void openSettingsWindow() {
+        SettingsGUI settingsGUI = new SettingsGUI(music);
+        settingsGUI.displaySettings();
+    }
 
 
     // Problemet med gamla gui som dyker upp var här, kan tas bort helt efter vi kontrollerat med resterande i gruppen

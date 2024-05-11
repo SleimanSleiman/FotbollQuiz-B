@@ -8,6 +8,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.Timer;
 import javax.swing.plaf.ColorUIResource;
+import Model.Music;
+
 
 public class QuizGUI {
     private JFrame frame;
@@ -23,9 +25,9 @@ public class QuizGUI {
     private QuizController quizController;
     private Timer timer; // @author Ali Farhan
     private int timeLeft = 30; // @author Ali Farhan
-
-    public QuizGUI(QuizController quizController) {
+    private Music music;    public QuizGUI(QuizController quizController) {
         this.quizController = quizController;
+
         UIManager.put("RadioButton.focus", new ColorUIResource(new Color(0xC0FFC1)));
 
         frame = new JFrame("Quiz Application");
@@ -158,10 +160,9 @@ public class QuizGUI {
     }
 
     private void openSettingsWindow() {
-        SettingsGUI settingsGUI = new SettingsGUI();
+        SettingsGUI settingsGUI = new SettingsGUI(music);
         settingsGUI.displaySettings();
     }
-
 
 
     /**
