@@ -59,6 +59,8 @@ public class ResultGUI {
         leaderboardButton.setBackground(new Color(0xFFFFFF));
         frame.add(leaderboardButton);
 
+
+
         restartButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -85,6 +87,8 @@ public class ResultGUI {
 
         frame.setVisible(true);
     }
+
+
 
     /**
      * @Author Ali Farhan

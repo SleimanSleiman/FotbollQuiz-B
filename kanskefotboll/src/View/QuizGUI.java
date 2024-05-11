@@ -2,7 +2,6 @@ package View;
 
 import Control.QuizController;
 import Model.Question;
-import Model.Music;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -20,7 +19,7 @@ public class QuizGUI {
     private JLabel timerLabel; // @author Ali Farhan
     private JButton exitButton; //@author Manar Majid Hasan Al-Maliki
     private ButtonGroup buttonGroup;
-
+    private JButton settingsButton;
     private QuizController quizController;
     private Timer timer; // @author Ali Farhan
     private int timeLeft = 30; // @author Ali Farhan
@@ -53,6 +52,8 @@ public class QuizGUI {
         optionButtons = new JRadioButton[4];
         buttonGroup = new ButtonGroup();
 
+
+
         for (int i = 0; i < optionButtons.length; i++) {
             optionButtons[i] = new JRadioButton();
             optionButtons[i].setBounds(50, 100 + i * 50, 500, 30);
@@ -78,6 +79,22 @@ public class QuizGUI {
         submitButton.setForeground(Color.BLACK);
         submitButton.setEnabled(false); //@author Ali Farhan
         frame.add(submitButton);
+
+        settingsButton = new JButton("Settings");
+        settingsButton.setBounds(720, 300, 100, 40);
+        settingsButton.setBackground(new Color(255, 255, 255));
+        settingsButton.setForeground(Color.BLACK);
+        frame.add(settingsButton);
+
+        settingsButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                openSettingsWindow();
+            }
+        });
+
+
+
 
 
         exitButton = new JButton("Exit");
@@ -140,6 +157,12 @@ public class QuizGUI {
         }
     }
 
+    private void openSettingsWindow() {
+        SettingsGUI settingsGUI = new SettingsGUI();
+        settingsGUI.displaySettings();
+    }
+
+
 
     /**
      * @author Ali Farhan
@@ -168,6 +191,7 @@ public class QuizGUI {
         timer.start();
     }
 
+
     public void updateScore(int score) {
         scoreLabel.setText("Score: " + score);
     }
@@ -179,4 +203,8 @@ public class QuizGUI {
         return frame;
      }
 }
+
+
+
+
 

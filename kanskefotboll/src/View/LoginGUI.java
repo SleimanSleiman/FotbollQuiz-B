@@ -7,6 +7,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import View.SettingsGUI;
 
 
 public class LoginGUI {
@@ -60,6 +61,13 @@ public class LoginGUI {
         settingsButton.setForeground(Color.BLACK);
         frame.add(settingsButton);
 
+        settingsButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                openSettingsWindow();
+            }
+        });
+
         startButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -75,15 +83,10 @@ public class LoginGUI {
         frame.setVisible(true);
     }
 
-   settingsButton.addActionListener(new ActionListener() {
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            openSettings(); // Define openSettings() method to handle settings opening
-        }
+    private void openSettingsWindow() {
+        SettingsGUI settingsGUI = new SettingsGUI();
+        settingsGUI.displaySettings();
     }
-    );
-
-    private void openSettings() {
 
 
     /**
@@ -94,4 +97,4 @@ public class LoginGUI {
     }
     }
 
-}
+

@@ -6,7 +6,7 @@ import java.awt.*;
 public class SettingsGUI {
     private JFrame frame;
 
-    public SettingsGUI() {
+    public void displaySettings() {
         frame = new JFrame("Settings");
         frame.setSize(400, 200);
         frame.setLayout(new BorderLayout());
