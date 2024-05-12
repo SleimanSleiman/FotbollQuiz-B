@@ -25,15 +25,20 @@ public class QuizGUI {
     private Timer timer; // @author Ali Farhan
     private int timeLeft = 30; // @author Ali Farhan
 
+    private JButton increaseVolumeButton;  // @author Ali Farhan
+    private JButton decreaseVolumeButton;  // @author Ali Farhan
+    private JButton muteButton;            // @author Ali Farhan
+
     public QuizGUI(QuizController quizController) {
         this.quizController = quizController;
         UIManager.put("RadioButton.focus", new ColorUIResource(new Color(0xC0FFC1)));
 
         frame = new JFrame("Quiz Application");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(850, 400);
+        frame.setSize(850, 450);
         frame.setLayout(null);
         frame.getContentPane().setBackground(new Color(192, 255, 193));
+
         questionLabel = new JLabel();
         questionLabel.setBounds(50, 50, 800, 30);
         frame.add(questionLabel);
@@ -102,9 +107,9 @@ public class QuizGUI {
             }
         });
 
-        /*
-        En metod som gör så att programmet avslutat när användaren klickar på "avsluta" knappen.
-        @author Manar Majid Hasan Al-Maliki
+        /**
+         * En metod som gör så att programmet avslutat när användaren klickar på "avsluta" knappen.
+         * @author Manar Majid Hasan Al-Maliki
          */
         exitButton.addActionListener(new ActionListener() {
             @Override
@@ -113,10 +118,28 @@ public class QuizGUI {
             }
         });
 
+
+        increaseVolumeButton = new JButton("+ Volume");                             // @author Ali Farhan
+        increaseVolumeButton.setBounds(750, 300, 90, 30);           // @author Ali Farhan
+        frame.add(increaseVolumeButton);                                                // @author Ali Farhan
+
+        decreaseVolumeButton = new JButton("- Volume");                         // @author Ali Farhan
+        decreaseVolumeButton.setBounds(750, 340, 90, 30);       // @author Ali Farhan
+        frame.add(decreaseVolumeButton);                                        // @author Ali Farhan
+
+        muteButton = new JButton("Mute");                               // @author Ali Farhan
+        muteButton.setBounds(750, 380, 90, 30);           // @author Ali Farhan
+        frame.add(muteButton);                                               // @author Ali Farhan
+
+        increaseVolumeButton.addActionListener(e -> quizController.increaseVolume());       // @author Ali Farhan
+        decreaseVolumeButton.addActionListener(e -> quizController.decreaseVolume());       // @author Ali Farhan
+        muteButton.addActionListener(e -> quizController.mute());                           // @author Ali Farhan
+
         setupTimer(); // @author Ali Farhan
 
         frame.setLocationRelativeTo(null); // Centrera GUI @Author Ali Farhan & Elias Celyir
         frame.setVisible(true);
+
     }
 
     public void showQuestion(Question question) {

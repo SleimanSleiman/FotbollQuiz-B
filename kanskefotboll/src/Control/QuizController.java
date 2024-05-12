@@ -3,6 +3,7 @@ package Control;
 import Model.Player;
 import Model.Question;
 import Model.Quiz;
+import Model.Music;
 import View.LoginGUI;
 import View.QuizGUI;
 import View.ResultGUI;
@@ -20,10 +21,14 @@ public class QuizController {
     private Quiz quiz;
     private Player player;
     private String lastSelectedCategory; //@author Ali Farhan
+    private Music backgroundMusic;
+
 
 
 
     public QuizController() {
+
+        backgroundMusic = new Music("backgroundMusic.wav");
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
@@ -151,7 +156,7 @@ public class QuizController {
 
     /**
      * Kontrollera spelarens status i spelet
-     * @Author Ali Farhan och Elias Celyir
+     * @author Ali Farhan och Elias Celyir
      */
     private void checkPlayerStatus(){
         if(player.getLives() <= 0){
@@ -195,7 +200,7 @@ public class QuizController {
 
 
     /**
-     * @Author Ali Farhan
+     * @author Ali Farhan
      */
     public void restartGame() {
         SwingUtilities.invokeLater(new Runnable() {
@@ -255,6 +260,35 @@ public class QuizController {
     }
 
 
+
+    /**
+     * @author Ali Farhan
+     */
+    public void increaseVolume() {
+        if (backgroundMusic != null) {
+            backgroundMusic.increaseVolume();
+        }
+    }
+
+    /**
+     * @author Ali Farhan
+     */
+
+    public void decreaseVolume() {
+        if (backgroundMusic != null) {
+            backgroundMusic.decreaseVolume();
+        }
+    }
+
+    /**
+     * @author Ali Farhan
+     */
+
+    public void mute() {
+        if (backgroundMusic != null) {
+            backgroundMusic.mute();
+        }
+    }
 
 
 }

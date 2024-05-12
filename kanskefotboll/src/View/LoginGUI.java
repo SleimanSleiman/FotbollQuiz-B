@@ -1,8 +1,6 @@
 package View;
 
 import Control.QuizController;
-import jdk.jfr.Category;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -15,12 +13,14 @@ public class LoginGUI {
     private JLabel categoryLabel;
     private JComboBox<String> categoryComboBox;
     private JButton startButton;
+    private JButton increaseVolumeButton;  // @author Ali Farhan
+    private JButton decreaseVolumeButton;  // @author Ali Farhan
+    private JButton muteButton;            // @author Ali Farhan
 
     private QuizController quizController;
 
     public LoginGUI(QuizController quizController) {
         this.quizController = quizController;
-
 
         frame = new JFrame("Quiz Login");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -37,38 +37,44 @@ public class LoginGUI {
         frame.add(nameField);
 
         categoryLabel = new JLabel("Category:");
-        categoryLabel.setBounds(140, 30, 100, 130);
+        categoryLabel.setBounds(140, 70, 100, 30);
         frame.add(categoryLabel);
 
         categoryComboBox = new JComboBox<>(new String[]{"Bundesliga", "Premier League", "Laliga", "Serie A", "Ligue 1"});
-        categoryComboBox.setBounds(210, 80, 200, 30);
-        categoryComboBox.setForeground(Color.BLACK);
+        categoryComboBox.setBounds(210, 70, 200, 30);
         frame.add(categoryComboBox);
 
         startButton = new JButton("Start Quiz");
-        startButton.setBounds(250, 180, 100, 40);
-        startButton.setBackground(new Color(255, 255, 255, 255));
-        startButton.setForeground(Color.black);
+        startButton.setBounds(250, 220, 100, 40);
         frame.add(startButton);
 
-        startButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                String playerName = nameField.getText();
-                String selectedCategory = (String) categoryComboBox.getSelectedItem();
-                quizController.onStartQuiz(playerName, selectedCategory);
-                frame.dispose(); // Stäng inloggningssidan när quizet börjar
-            }
+        increaseVolumeButton = new JButton("+ Volume");
+        increaseVolumeButton.setBounds(400, 100, 100, 30);
+        frame.add(increaseVolumeButton);
+
+        decreaseVolumeButton = new JButton("- Volume");
+        decreaseVolumeButton.setBounds(400, 140, 100, 30);
+        frame.add(decreaseVolumeButton);
+
+        muteButton = new JButton("Mute");
+        muteButton.setBounds(400, 180, 100, 30);
+        frame.add(muteButton);
+
+        startButton.addActionListener(e -> {
+            String playerName = nameField.getText();
+            String selectedCategory = (String) categoryComboBox.getSelectedItem();
+            quizController.onStartQuiz(playerName, selectedCategory);
+            frame.dispose(); // Stäng inloggningssidan när quizet börjar
         });
 
-        frame.setLocationRelativeTo(null); // Centrera GUI @Author Ali Farhan & Elias Celyir
+        increaseVolumeButton.addActionListener(e -> quizController.increaseVolume());
+        decreaseVolumeButton.addActionListener(e -> quizController.decreaseVolume());
+        muteButton.addActionListener(e -> quizController.mute());
 
+        frame.setLocationRelativeTo(null); // Centrera GUI @author Ali Farhan & Elias Celyir
         frame.setVisible(true);
     }
 
-    /**
-     * @Author Ali Farhan
-     */
     public Component getFrame() {
         return frame;
     }
