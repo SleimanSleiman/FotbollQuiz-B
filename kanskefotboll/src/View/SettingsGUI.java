@@ -2,7 +2,6 @@ package View;
 
 
 import javax.swing.*;
-
 import java.awt.*;
 
 
@@ -18,9 +17,6 @@ public class SettingsGUI {
         frame.setLayout(new BorderLayout());
         frame.getContentPane().setBackground(new Color(192, 255, 193));
         frame.setLocationRelativeTo(null);
-
-
-
 
 
 
