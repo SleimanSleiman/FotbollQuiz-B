@@ -45,7 +45,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "MusikKnappar",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -106,6 +106,7 @@
       <workItem from="1715442434537" duration="1108000" />
       <workItem from="1715443569267" duration="55000" />
       <workItem from="1715443996659" duration="6420000" />
+      <workItem from="1715513407844" duration="305000" />
     </task>
     <servers />
   </component>

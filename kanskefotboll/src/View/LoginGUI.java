@@ -85,7 +85,7 @@ public class LoginGUI {
 
 
     private void openSettingsWindow() {
-        SettingsGUI settingsGUI = new SettingsGUI(music);
+        SettingsGUI settingsGUI = new SettingsGUI();
         settingsGUI.displaySettings();
     }
 
