@@ -3,11 +3,11 @@ package Control;
 import Model.Player;
 import Model.Question;
 import Model.Quiz;
+import Model.Music;
 import View.LoginGUI;
 import View.QuizGUI;
 import View.ResultGUI;
-import View.SettingsGUI;
-import Model.Music;
+
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -21,10 +21,14 @@ public class QuizController {
     private Quiz quiz;
     private Player player;
     private String lastSelectedCategory; //@author Ali Farhan
-    private Music music;
+    private Music backgroundMusic;
+
+
 
 
     public QuizController() {
+
+        backgroundMusic = new Music("backgroundMusic.wav");
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
@@ -48,9 +52,6 @@ public class QuizController {
         });
     }
 
-    public Music getMusic() {
-        return music;
-    }
     public void submitAnswer(int selectedOption) {
         Question currentQuestion = quiz.getCurrentQuestion();
         if (currentQuestion != null) {
@@ -84,7 +85,7 @@ public class QuizController {
                 return generateCategory5Questions();
             default:
                 return null;
-        }//@author Sleiman Sleiman
+        }
     }
 
     private void showNextQuestion() {
@@ -129,7 +130,7 @@ public class QuizController {
     private List<Question> generateCategory3Questions() { return readQuestionsFromFile("Laliga.txt"); }
     private List<Question> generateCategory4Questions() { return readQuestionsFromFile("SerieA.txt"); }
     private List<Question> generateCategory5Questions() { return readQuestionsFromFile("Ligue1.txt"); }
-//@author Sleiman Sleiman
+
 
 
     private List<Question> readQuestionsFromFile(String filename) {
@@ -150,12 +151,12 @@ public class QuizController {
             e.printStackTrace();
         }
         return questions;
-    } //@author Sleiman Sleiman
+    }
 
 
     /**
      * Kontrollera spelarens status i spelet
-     * @Author Ali Farhan och Elias Celyir
+     * @author Ali Farhan och Elias Celyir
      */
     private void checkPlayerStatus(){
         if(player.getLives() <= 0){
@@ -163,10 +164,6 @@ public class QuizController {
         }
     }
 
-    private void openSettingsWindow() {
-        SettingsGUI settingsGUI = new SettingsGUI();
-        settingsGUI.displaySettings();
-    }
 
 
     // Problemet med gamla gui som dyker upp var här, kan tas bort helt efter vi kontrollerat med resterande i gruppen
@@ -203,7 +200,7 @@ public class QuizController {
 
 
     /**
-     * @Author Ali Farhan
+     * @author Ali Farhan
      */
     public void restartGame() {
         SwingUtilities.invokeLater(new Runnable() {
@@ -263,6 +260,35 @@ public class QuizController {
     }
 
 
+
+    /**
+     * @author Ali Farhan
+     */
+    public void increaseVolume() {
+        if (backgroundMusic != null) {
+            backgroundMusic.increaseVolume();
+        }
+    }
+
+    /**
+     * @author Ali Farhan
+     */
+
+    public void decreaseVolume() {
+        if (backgroundMusic != null) {
+            backgroundMusic.decreaseVolume();
+        }
+    }
+
+    /**
+     * @author Ali Farhan
+     */
+
+    public void mute() {
+        if (backgroundMusic != null) {
+            backgroundMusic.mute();
+        }
+    }
 
 
 }

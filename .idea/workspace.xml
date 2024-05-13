@@ -5,6 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43f76da9-61f4-4192-a5d6-b99a11743aad" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kanskefotboll/src/Control/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/kanskefotboll/src/Control/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kanskefotboll/src/Control/QuizController.java" beforeDir="false" afterPath="$PROJECT_DIR$/kanskefotboll/src/Control/QuizController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kanskefotboll/src/Model/Music.java" beforeDir="false" afterPath="$PROJECT_DIR$/kanskefotboll/src/Model/Music.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kanskefotboll/src/View/LoginGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/kanskefotboll/src/View/LoginGUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kanskefotboll/src/View/QuizGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/kanskefotboll/src/View/QuizGUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/leaderboard.txt" beforeDir="false" afterPath="$PROJECT_DIR$/leaderboard.txt" afterDir="false" />
     </list>
@@ -45,14 +50,12 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "TestGUI",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "configurable.group.build",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -84,14 +87,6 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
-        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
-      </set>
-    </attachedChunks>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -103,10 +98,6 @@
       <workItem from="1713798457048" duration="348000" />
       <workItem from="1713984108524" duration="2028000" />
       <workItem from="1714289265230" duration="2450000" />
-      <workItem from="1715442434537" duration="1108000" />
-      <workItem from="1715443569267" duration="55000" />
-      <workItem from="1715443996659" duration="6420000" />
-      <workItem from="1715513407844" duration="305000" />
     </task>
     <servers />
   </component>
