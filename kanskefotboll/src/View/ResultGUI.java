@@ -11,7 +11,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 /**
- * @Author Ali Farhan
+ * @author Ali Farhan
  */
 public class ResultGUI {
     private JFrame frame;
@@ -22,7 +22,7 @@ public class ResultGUI {
     private QuizController quizController;
 
     /**
-     * @Author Ali Farhan
+     * @author Ali Farhan och Elias Celayir
      */
 
     public ResultGUI(QuizController quizController, int score, int correctAnswers, int totalQuestions, String playerName) {
@@ -60,7 +60,6 @@ public class ResultGUI {
         frame.add(leaderboardButton);
 
 
-
         restartButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -91,7 +90,7 @@ public class ResultGUI {
 
 
     /**
-     * @Author Ali Farhan
+     * @author Ali Farhan
      */
     public void displayLeaderboard() {
         JFrame leaderboardFrame = new JFrame("Leaderboard");

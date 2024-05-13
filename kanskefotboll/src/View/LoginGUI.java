@@ -19,6 +19,9 @@ public class LoginGUI {
 
     private QuizController quizController;
 
+    /**
+     * @author Manar, Karam, Sleiman, Ali, Elias
+     */
     public LoginGUI(QuizController quizController) {
         this.quizController = quizController;
 

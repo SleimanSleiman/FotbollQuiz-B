@@ -29,6 +29,10 @@ public class QuizGUI {
     private JButton decreaseVolumeButton;  // @author Ali Farhan
     private JButton muteButton;            // @author Ali Farhan
 
+
+    /**
+     * @author Manar, Karam, Sleiman, Elias, Ali
+     */
     public QuizGUI(QuizController quizController) {
         this.quizController = quizController;
         UIManager.put("RadioButton.focus", new ColorUIResource(new Color(0xC0FFC1)));
@@ -107,10 +111,7 @@ public class QuizGUI {
             }
         });
 
-        /**
-         * En metod som gör så att programmet avslutat när användaren klickar på "avsluta" knappen.
-         * @author Manar Majid Hasan Al-Maliki
-         */
+
         exitButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -191,13 +192,26 @@ public class QuizGUI {
         timer.start();
     }
 
+
+    /**
+     * @author Manar och Karam
+     */
     public void updateScore(int score) {
         scoreLabel.setText("Score: " + score);
     }
 
+
+    /**
+     * @author Manar och Karam
+     */
     public void updateLives(int lives) {
         livesLabel.setText("Lives: " + lives);
     }
+
+
+    /**
+     * @author Manar och Karam
+     */
     public JFrame getFrame() {
         return frame;
      }

@@ -4,7 +4,9 @@ package View;
 import javax.swing.*;
 import java.awt.*;
 
-
+/**
+ * @author Sleiman Sleiman
+ */
 
 public class SettingsGUI {
     private JFrame frame;

@@ -18,7 +18,7 @@ public class Music {
     /**
      *
      * @param filename
-     * @author Ali Farhan § Sleiman
+     * @author Ali Farhan § Sleiman Sleiman
      */
 
     public void playBackgroundMusic(String filename) {

@@ -25,7 +25,9 @@ public class QuizController {
 
 
 
-
+    /**
+     * @author Manar, Karam, Sleiman, Ali
+     */
     public QuizController() {
 
         backgroundMusic = new Music("backgroundMusic.wav");
@@ -36,6 +38,10 @@ public class QuizController {
             }
         });
     }
+
+    /**
+     * @author Manar, Karam, Ali,
+     */
 
     public void onStartQuiz(String playerName, String category) {
         this.lastSelectedCategory = category; // @author Ali Farhan
@@ -52,6 +58,10 @@ public class QuizController {
         });
     }
 
+
+    /**
+     * @author Manar och Karam
+     */
     public void submitAnswer(int selectedOption) {
         Question currentQuestion = quiz.getCurrentQuestion();
         if (currentQuestion != null) {
@@ -71,6 +81,10 @@ public class QuizController {
     }
 
 
+
+    /**
+     * @author Sleiman och Elias
+     */
     private List<Question> generateQuestionsForCategory(String category) {
         switch (category) {
             case "Bundesliga":
@@ -88,6 +102,10 @@ public class QuizController {
         }
     }
 
+
+    /**
+     * @author Manar och Karam
+     */
     private void showNextQuestion() {
         Question currentQuestion = quiz.getCurrentQuestion();
         if (currentQuestion != null) {
@@ -121,6 +139,9 @@ public class QuizController {
 
 
 
+    /**
+     * @author Elias och Sleiman
+     */
     private List<Question> generateCategory1Questions() { return readQuestionsFromFile("Bundesliga.txt"); }
 
     private List<Question> generateCategory2Questions() {
@@ -133,6 +154,9 @@ public class QuizController {
 
 
 
+    /**
+     * @author Sleiman
+     */
     private List<Question> readQuestionsFromFile(String filename) {
         List<Question> questions = new ArrayList<>();
         try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
@@ -163,40 +187,6 @@ public class QuizController {
             endQuiz();
         }
     }
-
-
-
-    // Problemet med gamla gui som dyker upp var här, kan tas bort helt efter vi kontrollerat med resterande i gruppen
-    // Problemet löst av Ali och Elias
-    /*
-    private void showLossDialog() {
-        JPanel panel = new JPanel();
-        JLabel messageLabel = new JLabel("You have lost, do you want to play again?");
-        messageLabel.setForeground(new Color(0x0C0C0C));
-        panel.add(messageLabel);
-
-        JButton yesButton = new JButton("Yes");
-        yesButton.setBackground(new Color(0xFFFFFF));
-        yesButton.setForeground(new Color(0x0C0C0C));
-
-        JButton noButton = new JButton("No");
-        noButton.setBackground(new Color(0xFFFFFF));
-        noButton.setForeground(new Color(0x0C0C0C));
-
-
-        int choice = JOptionPane.showOptionDialog(null, panel, "Game over", JOptionPane.YES_NO_OPTION,
-                JOptionPane.PLAIN_MESSAGE, null, new JButton[]{yesButton, noButton}, null);
-
-        if (choice == JOptionPane.YES_OPTION) {
-            restartGame();
-        } else {
-            endQuiz();
-        }
-    }
-    */
-
-
-
 
 
     /**
