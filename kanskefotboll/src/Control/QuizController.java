@@ -9,15 +9,12 @@ import View.QuizGUI;
 import View.ResultGUI;
 
 import java.awt.*;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 import javax.swing.*;
 import javax.swing.plaf.ColorUIResource;
 import java.io.*;
+import java.util.List;
 
-@SuppressWarnings("ALL")
 public class QuizController {
     private LoginGUI loginGUI;
     private QuizGUI quizGUI;
@@ -238,16 +235,63 @@ public class QuizController {
         }
     }
 
+    /**
+     * Metod som läser in läser in leaderboard från textfil.
+     * @author Elias Celayir
+     */
+    private List<String[]> readLeaderboard(String filename) throws IOException {
+        List<String[]> entries = new ArrayList<>();
+        File file = new File(filename);
+        if (file.exists()) {
+            try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
+                String line;
+                while ((line = reader.readLine()) != null) {
+                    String[] parts = line.split(":");
+                    if(parts.length == 2) {
+                        entries.add(new String[] {parts[0], parts[1].trim()});
+                    }
+                }
+            }
+        }
+        return entries;
+    }
+
+    private void SaveLeaderboard(List<String[]> entries, String filename) throws IOException {
+        Collections.sort(entries, new Comparator<String[]>() {
+            @Override
+            public int compare(String[] entry1, String[] entry2) {
+                int score1 = Integer.parseInt(entry1[1]);
+                int score2 = Integer.parseInt(entry2[1]);
+                return Integer.compare(score2, score1);
+            }
+        });
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename))) {
+            for (int i = 0; i < Math.min(5, entries.size()); i++) {
+                writer.write(entries.get(i)[0] + ": " + entries.get(i)[1]);
+                writer.newLine();
+            }
+        }
+    }
+
+
+
 
     /**
     * @author Ali Farhan
      */
     private void saveScoreToLeaderboard() {
         String filename = "leaderboard.txt";
+        /*
         try (FileWriter fw = new FileWriter(filename, true);
              BufferedWriter bw = new BufferedWriter(fw);
              PrintWriter out = new PrintWriter(bw)) {
             out.println(player.getName() + ": " + player.getScore());
+
+         */
+        try {
+            List<String[]> entries = readLeaderboard(filename);
+            entries.add(new String[] {player.getName(), String.valueOf(player.getScore())});
+            SaveLeaderboard(entries, filename);
         } catch (IOException e) {
             System.err.println("Error writing to the leaderboard file: " + e.getMessage());
         }
