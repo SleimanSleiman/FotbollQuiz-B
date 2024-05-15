@@ -10,11 +10,14 @@ import View.ResultGUI;
 
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 import javax.swing.*;
 import javax.swing.plaf.ColorUIResource;
 import java.io.*;
 
+@SuppressWarnings("ALL")
 public class QuizController {
     private LoginGUI loginGUI;
     private QuizGUI quizGUI;
@@ -155,7 +158,7 @@ public class QuizController {
 
 
     /**
-     * @author Sleiman
+     * @author Sleiman Sleiman & Elias Celayir
      */
     private List<Question> readQuestionsFromFile(String filename) {
         List<Question> questions = new ArrayList<>();
@@ -174,13 +177,14 @@ public class QuizController {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        Collections.shuffle(questions);
         return questions;
     }
 
 
     /**
      * Kontrollera spelarens status i spelet
-     * @author Ali Farhan och Elias Celyir
+     * @author Ali Farhan och Elias Celayir
      */
     private void checkPlayerStatus(){
         if(player.getLives() <= 0){
