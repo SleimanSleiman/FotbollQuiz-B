@@ -78,7 +78,7 @@ public class ResultGUI {
         leaderboardButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                displayLeaderboard();
+                displayLeaderboard(quizController.getLastSelectedCategory());
             }
         });
 
@@ -87,17 +87,26 @@ public class ResultGUI {
         frame.setVisible(true);
     }
 
+    /**
+     * Returnerar filnamnet för den valda kategorin
+     * @author ELias Celayir
+     */
+    private String getFilenameForCategory(String category) {
+        return "leaderboard_" + category.replaceAll("leaderboard", "_") + ".txt";
+    }
 
 
     /**
-     * @author Ali Farhan
+     * Ali gjorde metoden från början. Elias ändrat så den tar in en parameter för att kunna visa leaderboard för vald kategori.
+     * @author Ali Farhan och Elias Celayir
      */
-    public void displayLeaderboard() {
-        JFrame leaderboardFrame = new JFrame("Leaderboard");
+    public void displayLeaderboard(String category) {
+        String filename = getFilenameForCategory(category);
+        JFrame leaderboardFrame = new JFrame("Leaderboard - " + category);
         JTextArea textArea = new JTextArea(10, 30);
         textArea.setEditable(false);
 
-        try (BufferedReader reader = new BufferedReader(new FileReader("leaderboard.txt"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 textArea.append(line + "\n");
@@ -111,4 +120,5 @@ public class ResultGUI {
         leaderboardFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         leaderboardFrame.setVisible(true);
     }
+
 }

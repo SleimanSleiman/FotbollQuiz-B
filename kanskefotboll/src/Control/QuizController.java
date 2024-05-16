@@ -8,10 +8,8 @@ import View.LoginGUI;
 import View.QuizGUI;
 import View.ResultGUI;
 
-import java.awt.*;
 import java.util.*;
 import javax.swing.*;
-import javax.swing.plaf.ColorUIResource;
 import java.io.*;
 import java.util.List;
 
@@ -256,6 +254,10 @@ public class QuizController {
         return entries;
     }
 
+    /**
+     * Metod som sparar leaderboard till textfilen. Metoden sorterar listan och sparar de 5 bästa resultaten till filen.
+     * @author Elias Celayir
+     */
     private void SaveLeaderboard(List<String[]> entries, String filename) throws IOException {
         Collections.sort(entries, new Comparator<String[]>() {
             @Override
@@ -277,17 +279,13 @@ public class QuizController {
 
 
     /**
-    * @author Ali Farhan
+     * Metod som sparar spelarens resultat till leaderboard, den funkar till varje kategori och sparar de 5 bästa resultaten till filen.
+     * @author Ali Farhan och Elias Celayir
      */
-    private void saveScoreToLeaderboard() {
-        String filename = "leaderboard.txt";
-        /*
-        try (FileWriter fw = new FileWriter(filename, true);
-             BufferedWriter bw = new BufferedWriter(fw);
-             PrintWriter out = new PrintWriter(bw)) {
-            out.println(player.getName() + ": " + player.getScore());
+    public void saveScoreToLeaderboard() {
+        String category = lastSelectedCategory;
+        String filename = "leaderboard_" + category + ".txt";
 
-         */
         try {
             List<String[]> entries = readLeaderboard(filename);
             entries.add(new String[] {player.getName(), String.valueOf(player.getScore())});
@@ -326,6 +324,10 @@ public class QuizController {
         if (backgroundMusic != null) {
             backgroundMusic.mute();
         }
+    }
+
+    public String getLastSelectedCategory() {
+        return lastSelectedCategory;
     }
 
 
