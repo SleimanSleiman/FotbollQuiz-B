@@ -30,9 +30,13 @@ public class ResultGUI {
 
         frame = new JFrame("Quiz Result for " + playerName);
         frame.setSize(400, 250);
-        frame.setLayout(null);
-        frame.getContentPane().setBackground(new Color(0xC0FFC1)); // Set background color here
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        // Ladda bakgrundsbilden
+        ImageIcon backgroundIcon = new ImageIcon(getClass().getResource("/images/background.png"));
+        BackgroundPanel backgroundPanel = new BackgroundPanel(backgroundIcon.getImage());
+        backgroundPanel.setLayout(null);
+        frame.setContentPane(backgroundPanel);
 
         scoreLabel = new JLabel("Your Score: " + score + " / " + totalQuestions);
         scoreLabel.setBounds(140, 40, 200, 30);

@@ -28,8 +28,12 @@ public class LoginGUI {
         frame = new JFrame("Quiz Login");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(600, 300);
-        frame.setLayout(null);
-        frame.getContentPane().setBackground(new Color(192, 255, 193));
+
+        // Ladda bakgrundsbilden
+        ImageIcon backgroundIcon = new ImageIcon(getClass().getResource("/images/background.png"));
+        BackgroundPanel backgroundPanel = new BackgroundPanel(backgroundIcon.getImage());
+        backgroundPanel.setLayout(null);
+        frame.setContentPane(backgroundPanel);
 
         nameLabel = new JLabel("Name:");
         nameLabel.setBounds(150, 30, 100, 30);

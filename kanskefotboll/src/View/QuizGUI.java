@@ -40,8 +40,12 @@ public class QuizGUI {
         frame = new JFrame("Quiz Application");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(850, 450);
-        frame.setLayout(null);
-        frame.getContentPane().setBackground(new Color(192, 255, 193));
+
+        // Ladda bakgrundsbilden
+        ImageIcon backgroundIcon = new ImageIcon(getClass().getResource("/images/background.png"));
+        BackgroundPanel backgroundPanel = new BackgroundPanel(backgroundIcon.getImage());
+        backgroundPanel.setLayout(null);
+        frame.setContentPane(backgroundPanel);
 
         questionLabel = new JLabel();
         questionLabel.setBounds(50, 50, 800, 30);
