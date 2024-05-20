@@ -166,7 +166,7 @@ public class QuizController {
                     String[] options = optionsLine.split(", ");
                     int correctAnswerIndex = Integer.parseInt(reader.readLine().substring("Correct Answer Index: ".length()));
                     int score = Integer.parseInt(reader.readLine().substring("Score: ".length()));
-                    questions.add(new Question(questionText, options, correctAnswerIndex, score));
+                    questions.add(new Question(questionText, options, correctAnswerIndex, score, imagePath));
                 }
             }
         } catch (IOException e) {
