@@ -29,7 +29,7 @@ public class ResultGUI {
         this.quizController = quizController;
 
         frame = new JFrame("Quiz Result for " + playerName);
-        frame.setSize(400, 250);
+        frame.setSize(850, 450);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         // Ladda bakgrundsbilden
@@ -38,27 +38,27 @@ public class ResultGUI {
         backgroundPanel.setLayout(null);
         frame.setContentPane(backgroundPanel);
 
-        scoreLabel = new JLabel("Your Score: " + score + " / " + totalQuestions);
-        scoreLabel.setBounds(140, 40, 200, 30);
+        scoreLabel = new JLabel("Your Score: " + score + " / " + totalQuestions, SwingConstants.CENTER);
+        scoreLabel.setBounds(225, 40, 400, 30);
         frame.add(scoreLabel);
 
-        JLabel correctLabel = new JLabel("Correct answers: " + correctAnswers + " / " + totalQuestions);
-        correctLabel.setBounds(120, 60, 200, 30);
+        JLabel correctLabel = new JLabel("Correct answers: " + correctAnswers + " / " + totalQuestions, SwingConstants.CENTER);
+        correctLabel.setBounds(225, 80, 400, 30);
         frame.add(correctLabel);
 
         restartButton = new JButton("Play again");
-        restartButton.setBounds(90, 120, 100, 30);
+        restartButton.setBounds(325, 150, 200, 40);
         restartButton.setBackground(new Color(0xFFFFFF));
         restartButton.setForeground(new Color(0x0C0C0C));
         frame.add(restartButton);
 
-        exitButton = new JButton("Avsluta");
-        exitButton.setBounds(200, 120, 100, 30);
+        exitButton = new JButton("Exit");
+        exitButton.setBounds(325, 250, 200, 40);
         exitButton.setBackground(new Color(0xFFFFFF));
         frame.add(exitButton);
 
         leaderboardButton = new JButton("Show Leaderboard");
-        leaderboardButton.setBounds(100, 170, 190, 30);
+        leaderboardButton.setBounds(325, 200, 200, 40);
         leaderboardButton.setForeground(new Color(0x0C0C0C));
         leaderboardButton.setBackground(new Color(0xFFFFFF));
         frame.add(leaderboardButton);

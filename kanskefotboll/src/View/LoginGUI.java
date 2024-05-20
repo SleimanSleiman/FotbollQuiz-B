@@ -27,7 +27,7 @@ public class LoginGUI {
 
         frame = new JFrame("Quiz Login");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(600, 300);
+        frame.setSize(850, 450);
 
         // Ladda bakgrundsbilden
         ImageIcon backgroundIcon = new ImageIcon(getClass().getResource("/images/background.png"));
@@ -40,7 +40,7 @@ public class LoginGUI {
         frame.add(nameLabel);
 
         nameField = new JTextField();
-        nameField.setBounds(210, 30, 200, 30);
+        nameField.setBounds(260, 30, 300, 30);  // Öka bredden på textfältet
         frame.add(nameField);
 
         categoryLabel = new JLabel("Category:");
@@ -48,23 +48,23 @@ public class LoginGUI {
         frame.add(categoryLabel);
 
         categoryComboBox = new JComboBox<>(new String[]{"Bundesliga", "Premier League", "Laliga", "Serie A", "Ligue 1"});
-        categoryComboBox.setBounds(210, 70, 200, 30);
+        categoryComboBox.setBounds(260, 80, 300, 30);  // Öka bredden på combobox
         frame.add(categoryComboBox);
 
         startButton = new JButton("Start Quiz");
-        startButton.setBounds(250, 220, 100, 40);
+        startButton.setBounds(320, 250, 200, 50);  // Justera placering och storlek
         frame.add(startButton);
 
         increaseVolumeButton = new JButton("+ Volume");
-        increaseVolumeButton.setBounds(400, 100, 100, 30);
+        increaseVolumeButton.setBounds(750, 300, 80, 40);  // Justera placering och storlek
         frame.add(increaseVolumeButton);
 
         decreaseVolumeButton = new JButton("- Volume");
-        decreaseVolumeButton.setBounds(400, 140, 100, 30);
+        decreaseVolumeButton.setBounds(750, 350, 80, 40);  // Justera placering och storlek
         frame.add(decreaseVolumeButton);
 
         muteButton = new JButton("Mute");
-        muteButton.setBounds(400, 180, 100, 30);
+        muteButton.setBounds(750, 250, 80, 40);  // Justera placering och storlek
         frame.add(muteButton);
 
         startButton.addActionListener(e -> {

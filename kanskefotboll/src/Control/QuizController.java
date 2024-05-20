@@ -24,7 +24,7 @@ public class QuizController {
 
 
     /**
-     * @author Manar, Karam, Sleiman, Ali
+     * @author Manar Almaliki, Karam Kallab, Sleiman Sleiman, Ali Farhna
      */
     public QuizController() {
 
@@ -38,7 +38,7 @@ public class QuizController {
     }
 
     /**
-     * @author Manar, Karam, Ali,
+     * @author Manar Almaliki, Karam Kallab, Ali Farhan
      */
 
     public void onStartQuiz(String playerName, String category) {
@@ -58,16 +58,16 @@ public class QuizController {
 
 
     /**
-     * @author Manar och Karam
+     * @author Manar Almaliki, Karam Kallab, Ali Farhan mindre justeringar i metoden
      */
     public void submitAnswer(int selectedOption) {
         Question currentQuestion = quiz.getCurrentQuestion();
-        if (currentQuestion != null) {
-            if (selectedOption == currentQuestion.getCorrectAnswerIndex()) {
 
+        if (currentQuestion != null) {
+            quizGUI.resetTimer();
+            if (selectedOption == currentQuestion.getCorrectAnswerIndex()) {
                 player.increaseScore(currentQuestion.getScore());
             } else {
-
                 player.decreaseLives();
                 checkPlayerStatus();
             }
@@ -102,8 +102,9 @@ public class QuizController {
 
 
     /**
-     * @author Manar och Karam
+     * @author Manar, Karam Kallab, Ali Farhan
      */
+
     private void showNextQuestion() {
         Question currentQuestion = quiz.getCurrentQuestion();
         if (currentQuestion != null) {
@@ -111,6 +112,7 @@ public class QuizController {
                 @Override
                 public void run() {
                     quizGUI.showQuestion(currentQuestion);
+                    quizGUI.resetTimer();
                 }
             });
         } else {
@@ -120,7 +122,7 @@ public class QuizController {
 
 
     /**
-     * @Author Ali Farhan
+     * @author Ali Farhan
      */
     private void endQuiz() {
         SwingUtilities.invokeLater(new Runnable() {
@@ -217,8 +219,8 @@ public class QuizController {
         if (quiz.getCurrentQuestion() != null) {
             player.decreaseLives();
             checkPlayerStatus();
-
             quiz.moveToNextQuestion();
+
             if (quiz.hasNextQuestion()) {
                 SwingUtilities.invokeLater(new Runnable() {
                     @Override
@@ -232,6 +234,7 @@ public class QuizController {
             quizGUI.updateLives(player.getLives()); // Uppdatera GUI med antalet liv
         }
     }
+
 
     /**
      * Metod som läser in läser in leaderboard från textfil.
@@ -277,7 +280,6 @@ public class QuizController {
 
 
 
-
     /**
      * Metod som sparar spelarens resultat till leaderboard, den funkar till varje kategori och sparar de 5 bästa resultaten till filen.
      * @author Ali Farhan och Elias Celayir
@@ -294,7 +296,6 @@ public class QuizController {
             System.err.println("Error writing to the leaderboard file: " + e.getMessage());
         }
     }
-
 
 
     /**
