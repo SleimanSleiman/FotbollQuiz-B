@@ -143,11 +143,9 @@ public class QuizController {
      * @author Elias och Sleiman
      */
     private List<Question> generateCategory1Questions() { return readQuestionsFromFile("Bundesliga.txt"); }
-
     private List<Question> generateCategory2Questions() {
         return readQuestionsFromFile("Premier_League.txt");
     }
-
     private List<Question> generateCategory3Questions() { return readQuestionsFromFile("Laliga.txt"); }
     private List<Question> generateCategory4Questions() { return readQuestionsFromFile("SerieA.txt"); }
     private List<Question> generateCategory5Questions() { return readQuestionsFromFile("Ligue1.txt"); }
@@ -168,7 +166,8 @@ public class QuizController {
                     String[] options = optionsLine.split(", ");
                     int correctAnswerIndex = Integer.parseInt(reader.readLine().substring("Correct Answer Index: ".length()));
                     int score = Integer.parseInt(reader.readLine().substring("Score: ".length()));
-                    questions.add(new Question(questionText, options, correctAnswerIndex, score));
+
+                    questions.add(new Question(questionText, options, correctAnswerIndex, score, imagePath));
                 }
             }
         } catch (IOException e) {
@@ -177,7 +176,6 @@ public class QuizController {
         Collections.shuffle(questions);
         return questions;
     }
-
 
     /**
      * Kontrollera spelarens status i spelet
@@ -188,8 +186,7 @@ public class QuizController {
             endQuiz();
         }
     }
-
-
+    
     /**
      * @author Ali Farhan
      */

@@ -5,15 +5,17 @@ public class Question {
     private String[] options;
     private int correctAnswerIndex;
     private int score;
+    private String imagePath;
 
     /**
      * @author Manar och Karam
      */
-    public Question(String text, String[] options, int correctAnswerIndex, int score) {
+    public Question(String text, String[] options, int correctAnswerIndex, int score, String imagePath) {
         this.text = text;
         this.options = options;
         this.correctAnswerIndex = correctAnswerIndex;
         this.score = score;
+        this.imagePath = imagePath;
     }
 
     /**
@@ -42,5 +44,12 @@ public class Question {
      */
     public int getScore() {
         return score;
+    }
+
+    /**
+     * @Author Elias Celayir
+     */
+    public String getImagePath() {
+        return imagePath;
     }
 }
