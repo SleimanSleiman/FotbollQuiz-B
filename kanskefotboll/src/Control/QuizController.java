@@ -20,6 +20,8 @@ public class QuizController {
     private Player player;
     private String lastSelectedCategory; //@author Ali Farhan
     private Music backgroundMusic;
+    private boolean quizEnded = false;
+
 
 
 
@@ -125,6 +127,9 @@ public class QuizController {
      * @author Ali Farhan
      */
     private void endQuiz() {
+        if (quizEnded) return; // Kontrollera om quizen redan har avslutats
+        quizEnded = true; // Sätt flaggan till true
+
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
@@ -136,7 +141,6 @@ public class QuizController {
             }
         });
     }
-
 
 
     /**
@@ -204,6 +208,9 @@ public class QuizController {
                 player.resetScore();
                 player.resetLives(3);
 
+                // Återställ flaggan för att tillåta en ny quizomgång
+                quizEnded = false; // Lägg till denna rad
+
                 // Skapa och visa LoginGUI igen
                 loginGUI = new LoginGUI(QuizController.this);
                 loginGUI.getFrame().setVisible(true);
@@ -212,10 +219,13 @@ public class QuizController {
     }
 
 
+
     /**
      * @author Ali Farhan
      */
     public void handleTimeOut() {
+        if (quizEnded) return;
+
         if (quiz.getCurrentQuestion() != null) {
             player.decreaseLives();
             checkPlayerStatus();
@@ -234,6 +244,7 @@ public class QuizController {
             quizGUI.updateLives(player.getLives()); // Uppdatera GUI med antalet liv
         }
     }
+
 
 
     /**

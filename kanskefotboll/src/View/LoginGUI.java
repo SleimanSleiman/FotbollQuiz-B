@@ -3,15 +3,14 @@ package View;
 import Control.QuizController;
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class LoginGUI {
     private JFrame frame;
     private JLabel nameLabel;
     private JTextField nameField;
+    private JToggleButton[] categoryButtons;
     private JLabel categoryLabel;
-    private JComboBox<String> categoryComboBox;
+    private JPanel categoryPanel;
     private JButton startButton;
     private JButton increaseVolumeButton;  // @author Ali Farhan
     private JButton decreaseVolumeButton;  // @author Ali Farhan
@@ -35,43 +34,79 @@ public class LoginGUI {
         backgroundPanel.setLayout(null);
         frame.setContentPane(backgroundPanel);
 
-        nameLabel = new JLabel("Name:");
-        nameLabel.setBounds(150, 30, 100, 30);
+        nameLabel = new JLabel("Name");
+        nameLabel.setBounds(400, 60, 300, 30);
+        nameLabel.setFont(new Font("Arial", Font.BOLD, 18));
         frame.add(nameLabel);
 
         nameField = new JTextField();
-        nameField.setBounds(260, 30, 300, 30);  // Öka bredden på textfältet
+        nameField.setBounds(275, 100, 300, 30);
         frame.add(nameField);
 
-        categoryLabel = new JLabel("Category:");
-        categoryLabel.setBounds(140, 70, 100, 30);
+        categoryLabel = new JLabel("Category");
+        categoryLabel.setBounds(390, 140, 300, 30);
+        categoryLabel.setFont(new Font("Arial", Font.BOLD, 18));
         frame.add(categoryLabel);
 
-        categoryComboBox = new JComboBox<>(new String[]{"Bundesliga", "Premier League", "Laliga", "Serie A", "Ligue 1"});
-        categoryComboBox.setBounds(260, 80, 300, 30);  // Öka bredden på combobox
-        frame.add(categoryComboBox);
+        // Skapa en panel för toggleknapparna
+        categoryPanel = new JPanel();
+        categoryPanel.setBounds(275, 180, 300, 120);
+        categoryPanel.setBackground(new Color(0, 0, 0, 0));
+        categoryPanel.setLayout(new GridLayout(0, 1));
+
+        String[] categories = {"Bundesliga", "Premier League", "Laliga", "Serie A", "Ligue 1"};
+        categoryButtons = new JToggleButton[categories.length];
+
+        for (int i = 0; i < categories.length; i++) {
+            categoryButtons[i] = new JToggleButton(categories[i]);
+            categoryButtons[i].setFont(new Font("Arial", Font.PLAIN, 16));
+            categoryButtons[i].setBackground(new Color(255, 255, 255));
+            categoryButtons[i].setForeground(Color.BLACK);
+            categoryButtons[i].setOpaque(true);
+            categoryButtons[i].setBorder(BorderFactory.createLineBorder(Color.BLACK));
+            categoryButtons[i].setFocusPainted(false);
+            categoryButtons[i].addActionListener(e -> handleToggleButton((JToggleButton) e.getSource()));
+            categoryPanel.add(categoryButtons[i]);
+        }
+
+        frame.add(categoryPanel);
 
         startButton = new JButton("Start Quiz");
-        startButton.setBounds(320, 250, 200, 50);  // Justera placering och storlek
+        startButton.setBounds(350, 320, 150, 40);
         frame.add(startButton);
 
         increaseVolumeButton = new JButton("+ Volume");
-        increaseVolumeButton.setBounds(750, 300, 80, 40);  // Justera placering och storlek
+        increaseVolumeButton.setBounds(750, 300, 80, 40);
         frame.add(increaseVolumeButton);
 
         decreaseVolumeButton = new JButton("- Volume");
-        decreaseVolumeButton.setBounds(750, 350, 80, 40);  // Justera placering och storlek
+        decreaseVolumeButton.setBounds(750, 350, 80, 40);
         frame.add(decreaseVolumeButton);
 
         muteButton = new JButton("Mute");
-        muteButton.setBounds(750, 250, 80, 40);  // Justera placering och storlek
+        muteButton.setBounds(750, 250, 80, 40);
         frame.add(muteButton);
 
         startButton.addActionListener(e -> {
             String playerName = nameField.getText();
-            String selectedCategory = (String) categoryComboBox.getSelectedItem();
-            quizController.onStartQuiz(playerName, selectedCategory);
-            frame.dispose(); // Stäng inloggningssidan när quizet börjar
+            String selectedCategory = null;
+            for (JToggleButton button : categoryButtons) {
+                if (button.isSelected()) {
+                    selectedCategory = button.getText();
+                    break;
+                }
+            }
+            if (playerName.isEmpty() && selectedCategory == null) {
+                JOptionPane.showMessageDialog(frame, "Please enter your name and select a category. ");
+            } else if (playerName.isEmpty()) {
+                JOptionPane.showMessageDialog(frame,"Please enter your name. ");
+            } else if (selectedCategory == null) {
+                JOptionPane.showMessageDialog(frame,"Please select a category. ");
+
+            } else {
+                quizController.onStartQuiz(playerName, selectedCategory);
+                frame.dispose();
+            }
         });
 
         increaseVolumeButton.addActionListener(e -> quizController.increaseVolume());
@@ -80,6 +115,22 @@ public class LoginGUI {
 
         frame.setLocationRelativeTo(null); // Centrera GUI @author Ali Farhan & Elias Celyir
         frame.setVisible(true);
+    }
+
+
+    /**
+     * @author Ali Farhan
+     * @param selectedButton
+     */
+    private void handleToggleButton(JToggleButton selectedButton) {
+        for (JToggleButton button : categoryButtons) {
+            if (button != selectedButton) {
+                button.setSelected(false);
+                button.setBackground(new Color(255, 255, 255));
+            } else {
+                button.setBackground(new Color(200, 200, 200));
+            }
+        }
     }
 
     public Component getFrame() {
