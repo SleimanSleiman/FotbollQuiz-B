@@ -1,7 +1,8 @@
-Question 1: Who was the top scorer in the Premier league during the 2022/2023 season?
-Options: Alexander Isak, Harry Kane, Erling Haaland, Mohamed Salah
-Correct Answer Index: 2
+Question 1: Which premier league team is this?
+Options: Manchester United, Chelsea, Liverpool, Arsenal
+Correct Answer Index: 3
 Score: 1
+Image: ../Images/Arsenal.jpg
 
 Question 2: Which team won the Premier league during the 2021/2022 season?
 Options: Arsenal, Manchester City, Liverpool, Chelsea
@@ -146,4 +147,9 @@ Score: 1
 Question 30: Who is the oldest player to make an appearance in the Premier league?
 Options: John Burridge, Mark Schwarzer, Brad Friedel, Maarten Stekelenburg
 Correct Answer Index: 0
+Score: 1
+
+Question 31: Who was the top scorer in the Premier league during the 2022/2023 season?
+Options: Alexander Isak, Harry Kane, Erling Haaland, Mohamed Salah
+Correct Answer Index: 2
 Score: 1
