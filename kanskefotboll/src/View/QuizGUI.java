@@ -32,11 +32,14 @@ public class QuizGUI {
 
 
     /**
-     * @author Manar, Karam, Sleiman, Elias, Ali
+     * Skapar ett nytt QuizGUI.
+     *
+     * @param quizController Kontrollern som hanterar quizlogiken.
+     * @author Manar Almaliki, Karam Kallab, Sleiman Sleiman, Elias Celayir, Ali Farhan
      */
     public QuizGUI(QuizController quizController) {
         this.quizController = quizController;
-        UIManager.put("CheckBox.focus", new ColorUIResource(new Color(0xC0FFC1)));  // Uppdaterad till CheckBox
+        UIManager.put("CheckBox.focus", new ColorUIResource(new Color(0xC0FFC1)));
 
         frame = new JFrame("Quiz Application");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -49,12 +52,12 @@ public class QuizGUI {
         frame.setContentPane(backgroundPanel);
 
         questionArea = new JTextArea();
-        questionArea.setBounds(50, 50, 750, 60); // Justera höjden för att rymma fler rader
-        questionArea.setFont(new Font("Arial", Font.BOLD, 25));  // Gör frågetexten fetstilad
-        questionArea.setLineWrap(true);  // Gör så att texten bryts till nästa rad
-        questionArea.setWrapStyleWord(true);  // Gör så att texten bryts vid hela ord
-        questionArea.setOpaque(false);  // Gör bakgrunden transparent
-        questionArea.setEditable(false);  // Gör textområdet oeditable
+        questionArea.setBounds(50, 50, 750, 60);
+        questionArea.setFont(new Font("Arial", Font.BOLD, 25));
+        questionArea.setLineWrap(true);
+        questionArea.setWrapStyleWord(true);
+        questionArea.setOpaque(false);
+        questionArea.setEditable(false);
         frame.add(questionArea);
 
         scoreLabel = new JLabel("Score: 0");
@@ -65,8 +68,8 @@ public class QuizGUI {
         livesLabel.setBounds(50, 20, 200, 30);
         frame.add(livesLabel);
 
-        timerLabel = new JLabel("Time: 30"); // @author Ali Farhan
-        timerLabel.setBounds(700,20, 100, 30); // @author Ali Farhan
+        timerLabel = new JLabel("Time: 30");
+        timerLabel.setBounds(700,20, 100, 30);
         frame.add(timerLabel); // @author Ali Farhan
 
         optionPanels = new JPanel[4];
@@ -74,7 +77,7 @@ public class QuizGUI {
 
         for (int i = 0; i < optionPanels.length; i++) {
             optionPanels[i] = new JPanel(new GridBagLayout());
-            optionPanels[i].setBounds(50 + (i % 2) * 400, 130 + (i / 2) * 100, 350, 80);  // Placera alternativen två per rad
+            optionPanels[i].setBounds(50 + (i % 2) * 400, 130 + (i / 2) * 100, 350, 80);
             optionPanels[i].setBackground(new Color(0xC0FFC1));
             optionPanels[i].setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
 
@@ -86,7 +89,7 @@ public class QuizGUI {
             optionPanels[i].addMouseListener(new MouseAdapter() {
                 @Override
                 public void mousePressed(MouseEvent e) {
-                    selectOption(optionIndex);  // Hantera klick på alternativ
+                    selectOption(optionIndex);
                     submitButton.setEnabled(true);
                 }
             });
@@ -96,10 +99,10 @@ public class QuizGUI {
         }
 
         submitButton = new JButton("Submit");
-        submitButton.setBounds(300, 360, 100, 40);  // Justerad position för att undvika överlappning
+        submitButton.setBounds(300, 360, 100, 40);
         submitButton.setBackground(new Color(255, 255, 255));
         submitButton.setForeground(Color.BLACK);
-        submitButton.setEnabled(false); //@author Ali Farhan
+        submitButton.setEnabled(false);
         frame.add(submitButton);
 
 
@@ -121,38 +124,40 @@ public class QuizGUI {
         exitButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.exit(0); //Avsluta programmet när kanppen klickas.
+                System.exit(0);
             }
         });
 
         exitButton.addActionListener(e -> System.exit(0));
-        increaseVolumeButton = new JButton("+ Volume");                             // @author Ali Farhan
-        increaseVolumeButton.setBounds(750, 340, 90, 30);           // @author Ali Farhan
-        frame.add(increaseVolumeButton);                                                // @author Ali Farhan
+        increaseVolumeButton = new JButton("+ Volume");
+        increaseVolumeButton.setBounds(750, 340, 90, 30);
+        frame.add(increaseVolumeButton);
 
-        decreaseVolumeButton = new JButton("- Volume");                         // @author Ali Farhan
-        decreaseVolumeButton.setBounds(750, 380, 90, 30);       // @author Ali Farhan
-        frame.add(decreaseVolumeButton);                                        // @author Ali Farhan
+        decreaseVolumeButton = new JButton("- Volume");
+        decreaseVolumeButton.setBounds(750, 380, 90, 30);
+        frame.add(decreaseVolumeButton);
 
-        muteButton = new JButton("Mute");                               // @author Ali Farhan
-        muteButton.setBounds(660, 360, 90, 30);           // @author Ali Farhan
-        frame.add(muteButton);                                               // @author Ali Farhan
+        muteButton = new JButton("Mute");
+        muteButton.setBounds(660, 360, 90, 30);
+        frame.add(muteButton);
 
-        increaseVolumeButton.addActionListener(e -> quizController.increaseVolume());       // @author Ali Farhan
-        decreaseVolumeButton.addActionListener(e -> quizController.decreaseVolume());       // @author Ali Farhan
-        muteButton.addActionListener(e -> quizController.mute());                           // @author Ali Farhan
+        increaseVolumeButton.addActionListener(e -> quizController.increaseVolume());
+        decreaseVolumeButton.addActionListener(e -> quizController.decreaseVolume());
+        muteButton.addActionListener(e -> quizController.mute());
 
-        setupTimer(); // @author Ali Farhan
+        setupTimer();
 
-        frame.setLocationRelativeTo(null); // Centrera GUI @Author Ali Farhan & Elias Celyir
+        frame.setLocationRelativeTo(null);
         frame.setVisible(true);
 
     }
 
 
     /**
+     * Visar en fråga och alternativen på skärmen.
+     *
+     * @param question Frågan som ska visas.
      * @author Ali Farhan
-     * @param question
      */
     public void showQuestion(Question question) {
         SwingUtilities.invokeLater(() -> {
@@ -173,6 +178,8 @@ public class QuizGUI {
 
 
     /**
+     * Ställer in timern som räknar ner från 30 sekunder och hanterar tidsgränsen.
+     *
      * @author Ali Farhan
      */
     private void setupTimer() {
@@ -191,6 +198,8 @@ public class QuizGUI {
 
 
     /**
+     * Återställer timern till 30 sekunder och startar om den.
+     *
      * @author Ali Farhan
      */
     public void resetTimer() {
@@ -202,8 +211,10 @@ public class QuizGUI {
 
 
     /**
+     * Markerar det valda alternativet och avmarkerar de andra.
+     *
+     * @param index Index för det valda alternativet.
      * @author Ali Farhan
-     * @param index
      */
     private void selectOption(int index) {
         selectedOption = index;
@@ -214,7 +225,10 @@ public class QuizGUI {
 
 
     /**
-     * @author Manar och Karam
+     * Uppdaterar poängen som visas på skärmen.
+     *
+     * @param score Den nya poängen.
+     * @author Manar Almaliki och Karam Kallab
      */
     public void updateScore(int score) {
         scoreLabel.setText("Score: " + score);
@@ -222,7 +236,10 @@ public class QuizGUI {
 
 
     /**
-     * @author Manar och Karam
+     * Uppdaterar antalet liv som visas på skärmen.
+     *
+     * @param lives Det nya antalet liv.
+     * @author Manar Almaliki och Karam Kallab
      */
     public void updateLives(int lives) {
         livesLabel.setText("Lives: " + lives);
@@ -230,7 +247,10 @@ public class QuizGUI {
 
 
     /**
-     * @author Manar och Karam
+     * Returnerar JFrame-komponenten.
+     *
+     * @return JFrame-komponenten.
+     * @author Manar Almaliki och Karam Kallab
      */
     public JFrame getFrame() {
         return frame;

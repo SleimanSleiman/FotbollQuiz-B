@@ -11,6 +11,8 @@ import java.io.FileReader;
 import java.io.IOException;
 
 /**
+ * ResultGUI visar resultatet av quizet och ger alternativ för att spela igen, avsluta eller visa ledartavlan.
+ *
  * @author Ali Farhan
  */
 public class ResultGUI {
@@ -22,6 +24,13 @@ public class ResultGUI {
     private QuizController quizController;
 
     /**
+     * Skapar ett nytt ResultGUI.
+     *
+     * @param quizController Kontrollern som hanterar quizlogiken.
+     * @param score Poängen spelaren fick.
+     * @param correctAnswers Antalet korrekta svar.
+     * @param totalQuestions Totala antalet frågor.
+     * @param playerName Spelarens namn.
      * @author Ali Farhan och Elias Celayir
      */
 
@@ -32,7 +41,6 @@ public class ResultGUI {
         frame.setSize(850, 450);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        // Ladda bakgrundsbilden
         ImageIcon backgroundIcon = new ImageIcon(getClass().getResource("/images/background.png"));
         BackgroundPanel backgroundPanel = new BackgroundPanel(backgroundIcon.getImage());
         backgroundPanel.setLayout(null);
@@ -86,14 +94,17 @@ public class ResultGUI {
             }
         });
 
-        frame.setLocationRelativeTo(null); // Centrera GUI @Author Ali Farhan & Elias Celyir
+        frame.setLocationRelativeTo(null);
 
         frame.setVisible(true);
     }
 
     /**
-     * Returnerar filnamnet för den valda kategorin
-     * @author ELias Celayir
+     * Returnerar filnamnet för den valda kategorin.
+     *
+     * @param category Kategorin för vilken filnamnet ska returneras.
+     * @return Filnamnet för ledartavlan för den angivna kategorin.
+     * @author Elias Celayir
      */
     private String getFilenameForCategory(String category) {
         return "leaderboard_" + category.replaceAll("leaderboard", "_") + ".txt";
@@ -101,7 +112,8 @@ public class ResultGUI {
 
 
     /**
-     * Ali gjorde metoden från början. Elias ändrat så den tar in en parameter för att kunna visa leaderboard för vald kategori.
+     * Ali gjorde metoden från början. Elias ändrat så den tar in en parameter för att kunna
+     * visa leaderboard för vald kategori.
      * @author Ali Farhan och Elias Celayir
      */
     public void displayLeaderboard(String category) {

@@ -9,7 +9,10 @@ public class Quiz {
     private int currentQuestionIndex;
 
     /**
-     * @author Manar och Karam
+     * Skapar ett nytt Quiz-objekt med en lista av frågor och sätter den aktuella frågeindex till 0.
+     *
+     * @param questions Listan av frågor för quizet.
+     * @author Manar Almaliki och Karam Kallab
      */
     public Quiz(List<Question> questions) {
         this.questions = questions;
@@ -17,14 +20,20 @@ public class Quiz {
     }
 
     /**
-     * @author Manar och Karam
+     * Kontrollerar om det finns fler frågor kvar i quizet.
+     *
+     * @return true om det finns fler frågor, annars false.
+     * @author Manar Almaliki och Karam Kallab
      */
     public boolean hasNextQuestion() {
         return currentQuestionIndex < questions.size();
     }
 
     /**
-     * @author Manar och Karam
+     * Returnerar den aktuella frågan om det finns fler frågor kvar.
+     *
+     * @return Den aktuella frågan eller null om det inte finns fler frågor.
+     * @author Manar Almaliki och Karam Kallab
      */
     public Question getCurrentQuestion() {
         if (hasNextQuestion()) {
@@ -35,14 +44,19 @@ public class Quiz {
     }
 
     /**
-     * @author Manar och Karam
+     * Flyttar till nästa fråga i quizet genom att öka det aktuella frågeindexet med ett.
+     *
+     * @author Manar Almaliki och Karam Kallab
      */
     public void moveToNextQuestion() {
         currentQuestionIndex++;
     }
 
     /**
-     * @Author Ali Farhan
+     * Returnerar listan av alla frågor i quizet.
+     *
+     * @return Listan av frågor.
+     * @author Ali Farhan
      */
     public List<Question> getQuestions() {
         return questions;

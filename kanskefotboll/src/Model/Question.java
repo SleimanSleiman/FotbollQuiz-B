@@ -7,7 +7,13 @@ public class Question {
     private int score;
 
     /**
-     * @author Manar och Karam
+     * Skapar en ny fråga med den angivna texten, alternativen, indexet för rätt svar och poängen för frågan.
+     *
+     * @param text  Texten för frågan.
+     * @param options  Alternativen för frågan.
+     * @param correctAnswerIndex Indexet för det rätta svaret i alternativarrayen.
+     * @param score  Poängen för frågan.
+     * @author Manar Almaliki och Karam Kallab
      */
     public Question(String text, String[] options, int correctAnswerIndex, int score) {
         this.text = text;
@@ -17,28 +23,40 @@ public class Question {
     }
 
     /**
-     * @author Manar och Karam
+     * Returnerar texten för frågan.
+     *
+     * @return Texten för frågan.
+     * @author Manar Almaliki och Karam Kallab
      */
     public String getText() {
         return text;
     }
 
     /**
-     * @author Manar och Karam
+     * Returnerar alternativen för frågan.
+     *
+     * @return En array med alternativen för frågan.
+     * @author Manar Almaliki och Karam Kallab
      */
     public String[] getOptions() {
         return options;
     }
 
     /**
-     * @author Manar och Karam
+     * Returnerar indexet för det rätta svaret i alternativarrayen.
+     *
+     * @return Indexet för det rätta svaret.
+     * @author Manar Almaliki och Karam Kallab
      */
     public int getCorrectAnswerIndex() {
         return correctAnswerIndex;
     }
 
     /**
-     * @author Manar och Karam
+     * Returnerar poängen för frågan.
+     *
+     * @return Poängen för frågan.
+     * @author Manar Almaliki och Karam Kallab
      */
     public int getScore() {
         return score;

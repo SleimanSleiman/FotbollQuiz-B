@@ -12,14 +12,17 @@ public class LoginGUI {
     private JLabel categoryLabel;
     private JPanel categoryPanel;
     private JButton startButton;
-    private JButton increaseVolumeButton;  // @author Ali Farhan
-    private JButton decreaseVolumeButton;  // @author Ali Farhan
-    private JButton muteButton;            // @author Ali Farhan
+    private JButton increaseVolumeButton;
+    private JButton decreaseVolumeButton;
+    private JButton muteButton;
 
     private QuizController quizController;
 
     /**
-     * @author Manar, Karam, Sleiman, Ali, Elias
+     * Skapar ett nytt LoginGUI.
+     *
+     * @param quizController Kontrollern som hanterar quizlogiken.
+     * @author Manar Almaliki, Karam Kallab, Sleiman Sleiman, Ali Farhan, Elias Celayir
      */
     public LoginGUI(QuizController quizController) {
         this.quizController = quizController;
@@ -28,7 +31,6 @@ public class LoginGUI {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(850, 450);
 
-        // Ladda bakgrundsbilden
         ImageIcon backgroundIcon = new ImageIcon(getClass().getResource("/images/background.png"));
         BackgroundPanel backgroundPanel = new BackgroundPanel(backgroundIcon.getImage());
         backgroundPanel.setLayout(null);
@@ -48,7 +50,6 @@ public class LoginGUI {
         categoryLabel.setFont(new Font("Arial", Font.BOLD, 18));
         frame.add(categoryLabel);
 
-        // Skapa en panel för toggleknapparna
         categoryPanel = new JPanel();
         categoryPanel.setBounds(275, 180, 300, 120);
         categoryPanel.setBackground(new Color(0, 0, 0, 0));
@@ -113,14 +114,17 @@ public class LoginGUI {
         decreaseVolumeButton.addActionListener(e -> quizController.decreaseVolume());
         muteButton.addActionListener(e -> quizController.mute());
 
-        frame.setLocationRelativeTo(null); // Centrera GUI @author Ali Farhan & Elias Celyir
+        frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
 
 
     /**
+     * Hanterar toggleknappens beteende när en kategori väljs.
+     * Avmarkerar alla andra knappar och markerar endast den valda knappen.
+     *
+     * @param selectedButton Den valda JToggleButton.
      * @author Ali Farhan
-     * @param selectedButton
      */
     private void handleToggleButton(JToggleButton selectedButton) {
         for (JToggleButton button : categoryButtons) {

@@ -26,6 +26,7 @@ public class QuizController {
 
 
     /**
+     * Skapar en ny QuizController och visar login-fönstret.
      * @author Manar Almaliki, Karam Kallab, Sleiman Sleiman, Ali Farhna
      */
     public QuizController() {
@@ -40,6 +41,10 @@ public class QuizController {
     }
 
     /**
+     *
+     * Startar quizet med spelarens namn och vald kategori.
+     * @param playerName Namnet på spelaren.
+     * @param category Den valda kategorin för frågorna
      * @author Manar Almaliki, Karam Kallab, Ali Farhan
      */
 
@@ -60,7 +65,10 @@ public class QuizController {
 
 
     /**
-     * @author Manar Almaliki, Karam Kallab, Ali Farhan mindre justeringar i metoden
+     * Skickar spelarens svar och uppdaterar poäng och liv.
+     * @param selectedOption Det valda svarsalternativet.
+     *
+     * @author Manar Almaliki, Karam Kallab, Ali Farhan
      */
     public void submitAnswer(int selectedOption) {
         Question currentQuestion = quiz.getCurrentQuestion();
@@ -83,6 +91,9 @@ public class QuizController {
 
 
     /**
+     * Genererar frågor baserade på vald kategori.
+     * @param category Den valda kategorin.
+     * @return En lista med frågor för kategorin.
      * @author Sleiman och Elias
      */
     private List<Question> generateQuestionsForCategory(String category) {
@@ -104,6 +115,7 @@ public class QuizController {
 
 
     /**
+     * Visar nästa fråga i quizet.
      * @author Manar, Karam Kallab, Ali Farhan
      */
 
@@ -124,6 +136,7 @@ public class QuizController {
 
 
     /**
+     * Avslutar quizet och visar resultatet.
      * @author Ali Farhan
      */
     private void endQuiz() {
@@ -144,6 +157,10 @@ public class QuizController {
 
 
     /**
+     *
+     * Läser in frågor från en fil för en liga.
+     * @return En lista med frågor för ligan.
+     *
      * @author Elias och Sleiman
      */
     private List<Question> generateCategory1Questions() { return readQuestionsFromFile("Bundesliga.txt"); }
@@ -159,6 +176,10 @@ public class QuizController {
 
 
     /**
+     *
+     * Läser in frågor från en angiven fil.
+     * @param filename Namnet på filen med frågor.
+     * @return En lista med frågor från filen.
      * @author Sleiman Sleiman & Elias Celayir
      */
     private List<Question> readQuestionsFromFile(String filename) {
@@ -195,6 +216,7 @@ public class QuizController {
 
 
     /**
+     * Startar om spelet och återställer spelarens poäng och liv.
      * @author Ali Farhan
      */
     public void restartGame() {
@@ -221,6 +243,7 @@ public class QuizController {
 
 
     /**
+     * Hanterar timeout-händelsen och flyttar till nästa fråga eller avslutar quizet.
      * @author Ali Farhan
      */
     public void handleTimeOut() {
@@ -248,7 +271,10 @@ public class QuizController {
 
 
     /**
-     * Metod som läser in läser in leaderboard från textfil.
+     * Läser in leaderboard från en fil.
+     * @param filename Namnet på filen med leaderboard.
+     * @return En lista med leaderboard-inlägg.
+     * @throws IOException Om det uppstår ett fel vid läsning från filen.
      * @author Elias Celayir
      */
     private List<String[]> readLeaderboard(String filename) throws IOException {
@@ -269,7 +295,8 @@ public class QuizController {
     }
 
     /**
-     * Metod som sparar leaderboard till textfilen. Metoden sorterar listan och sparar de 5 bästa resultaten till filen.
+     * Metod som sparar leaderboard till textfilen. Metoden sorterar listan och sparar de 5
+     * bästa resultaten till filen.
      * @author Elias Celayir
      */
     private void SaveLeaderboard(List<String[]> entries, String filename) throws IOException {
@@ -292,7 +319,8 @@ public class QuizController {
 
 
     /**
-     * Metod som sparar spelarens resultat till leaderboard, den funkar till varje kategori och sparar de 5 bästa resultaten till filen.
+     * Metod som sparar spelarens resultat till leaderboard, den funkar till varje kategori och
+     * sparar de 5 bästa resultaten till filen.
      * @author Ali Farhan och Elias Celayir
      */
     public void saveScoreToLeaderboard() {
@@ -310,6 +338,7 @@ public class QuizController {
 
 
     /**
+     * Ökar volymen på bakgrundsmusiken.
      * @author Ali Farhan
      */
     public void increaseVolume() {
@@ -319,6 +348,7 @@ public class QuizController {
     }
 
     /**
+     * Minskar volymen på bakgrundsmusiken.
      * @author Ali Farhan
      */
 
@@ -329,6 +359,7 @@ public class QuizController {
     }
 
     /**
+     * Stänger av bakgrundsmusiken.
      * @author Ali Farhan
      */
 
@@ -338,6 +369,11 @@ public class QuizController {
         }
     }
 
+    /**
+     * Hämtar den senast valda kategorin.
+     * @return Den senast valda kategorin.
+     * @author Elias Celayir
+     */
     public String getLastSelectedCategory() {
         return lastSelectedCategory;
     }
