@@ -1,10 +1,8 @@
 package Model;
 
-import Model.Question;
-
 import java.util.List;
 
-public class Quiz {
+public class QuestionHandler {
     private List<Question> questions;
     private int currentQuestionIndex;
 
@@ -14,7 +12,7 @@ public class Quiz {
      * @param questions Listan av frågor för quizet.
      * @author Manar Almaliki och Karam Kallab
      */
-    public Quiz(List<Question> questions) {
+    public QuestionHandler(List<Question> questions) {
         this.questions = questions;
         this.currentQuestionIndex = 0;
     }

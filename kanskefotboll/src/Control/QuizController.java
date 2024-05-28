@@ -2,7 +2,7 @@ package Control;
 
 import Model.Player;
 import Model.Question;
-import Model.Quiz;
+import Model.QuestionHandler;
 import Model.Music;
 import View.LoginGUI;
 import View.QuizGUI;
@@ -14,7 +14,7 @@ import java.util.List;
 
 public class QuizController {
     private QuizGUI quizGUI;
-    private Quiz quiz;
+    private QuestionHandler quiz;
     private Player player;
 
     private String lastSelectedCategory; //@author Ali Farhan
@@ -50,7 +50,7 @@ public class QuizController {
         LoginGUI  loginGUI = null; // Stäng inloggningssidan när quizet börjar
         List<Question> questions = generateQuestionsForCategory(category);
         player = new Player(playerName, 3);
-        quiz = new Quiz(questions);
+        quiz = new QuestionHandler(questions);
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
