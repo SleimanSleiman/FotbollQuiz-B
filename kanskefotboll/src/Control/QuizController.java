@@ -7,7 +7,6 @@ import Model.Music;
 import View.LoginGUI;
 import View.QuizGUI;
 import View.ResultGUI;
-
 import java.util.*;
 import javax.swing.*;
 import java.io.*;
@@ -20,8 +19,6 @@ public class QuizController {
     private String lastSelectedCategory; //@author Ali Farhan
     private Music backgroundMusic;
     private boolean quizEnded = false;
-
-
 
 
     /**
@@ -179,7 +176,7 @@ public class QuizController {
      * Läser in frågor från en angiven fil.
      * @param filename Namnet på filen med frågor.
      * @return En lista med frågor från filen.
-     * @author Sleiman Sleiman & Elias Celayir
+     * @author Sleiman Sleiman & Elias Celayir & Karam Kallab
      */
     private List<Question> readQuestionsFromFile(String filename) {
         List<Question> questions = new ArrayList<>();

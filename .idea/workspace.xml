@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43f76da9-61f4-4192-a5d6-b99a11743aad" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kanskefotboll/src/Control/QuizController.java" beforeDir="false" afterPath="$PROJECT_DIR$/kanskefotboll/src/Control/QuizController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kanskefotboll/src/View/QuizGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/kanskefotboll/src/View/QuizGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kanskefotboll/src/View/SettingsGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/kanskefotboll/src/View/SettingsGUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +44,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "Test2-MVC",
+    "git-widget-placeholder": "main",
     "jdk.selected.JAVA_MODULE": "21 (2)",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
