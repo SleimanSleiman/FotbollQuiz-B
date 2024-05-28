@@ -11,8 +11,6 @@ import java.awt.*;
 public class SettingsGUI {
     private JFrame frame;
 
-
-
     public void displaySettings() {
         frame = new JFrame("Settings");
         frame.setSize(400, 200);

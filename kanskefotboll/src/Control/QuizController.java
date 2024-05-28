@@ -14,7 +14,6 @@ import java.io.*;
 import java.util.List;
 
 public class QuizController {
-    private LoginGUI loginGUI;
     private QuizGUI quizGUI;
     private Quiz quiz;
     private Player player;
@@ -35,7 +34,7 @@ public class QuizController {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-                loginGUI = new LoginGUI(QuizController.this);
+               LoginGUI loginGUI = new LoginGUI(QuizController.this);
             }
         });
     }
@@ -50,7 +49,7 @@ public class QuizController {
 
     public void onStartQuiz(String playerName, String category) {
         this.lastSelectedCategory = category; // @author Ali Farhan
-        loginGUI = null; // Stäng inloggningssidan när quizet börjar
+        LoginGUI  loginGUI = null; // Stäng inloggningssidan när quizet börjar
         List<Question> questions = generateQuestionsForCategory(category);
         player = new Player(playerName, 3);
         quiz = new Quiz(questions);
@@ -234,12 +233,11 @@ public class QuizController {
                 quizEnded = false; // Lägg till denna rad
 
                 // Skapa och visa LoginGUI igen
-                loginGUI = new LoginGUI(QuizController.this);
+                LoginGUI loginGUI = new LoginGUI(QuizController.this);
                 loginGUI.getFrame().setVisible(true);
             }
         });
     }
-
 
 
     /**
