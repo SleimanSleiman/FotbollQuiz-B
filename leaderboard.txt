@@ -1,5 +1,0 @@
-Test3: 15
-: 12
-Test: 4
-Test1: 4
-Elle: 2

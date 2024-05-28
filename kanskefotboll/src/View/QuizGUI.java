@@ -2,7 +2,6 @@ package View;
 
 import Control.QuizController;
 import Model.Question;
-import Model.Music;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;

@@ -16,6 +16,7 @@ public class QuizController {
     private QuizGUI quizGUI;
     private Quiz quiz;
     private Player player;
+
     private String lastSelectedCategory; //@author Ali Farhan
     private Music backgroundMusic;
     private boolean quizEnded = false;
@@ -25,7 +26,7 @@ public class QuizController {
      * Skapar en ny QuizController och visar login-fönstret.
      * @author Manar Almaliki, Karam Kallab, Sleiman Sleiman, Ali Farhna
      */
-    public QuizController() {
+    public QuizController(){
 
         backgroundMusic = new Music("backgroundMusic.wav");
         SwingUtilities.invokeLater(new Runnable() {
@@ -372,6 +373,5 @@ public class QuizController {
     public String getLastSelectedCategory() {
         return lastSelectedCategory;
     }
-
 
 }
