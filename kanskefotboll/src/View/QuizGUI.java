@@ -60,16 +60,22 @@ public class QuizGUI {
         frame.add(questionArea);
 
         scoreLabel = new JLabel("Score: 0");
-        scoreLabel.setBounds(400, 20, 200, 30);
+        scoreLabel.setBounds(375, 20, 200, 30);
+        scoreLabel.setForeground(Color.BLACK);
+        scoreLabel.setFont(new Font("Arial", Font.BOLD, 20));
         frame.add(scoreLabel);
 
         livesLabel = new JLabel("Lives: 3");
         livesLabel.setBounds(50, 20, 200, 30);
+        livesLabel.setForeground(Color.BLACK);
+        livesLabel.setFont(new Font("Arial", Font.BOLD, 20));
         frame.add(livesLabel);
 
         timerLabel = new JLabel("Time: 30");
-        timerLabel.setBounds(700,20, 100, 30);
-        frame.add(timerLabel); // @author Ali Farhan
+        timerLabel.setBounds(650, 20, 200, 30);
+        timerLabel.setForeground(Color.BLACK);
+        timerLabel.setFont(new Font("Arial", Font.BOLD, 20));
+        frame.add(timerLabel);
 
         optionPanels = new JPanel[4];
         optionLabels = new JLabel[4];
