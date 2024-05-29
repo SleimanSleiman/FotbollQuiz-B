@@ -1,5 +1,6 @@
 package Control;
 
+
 import Model.Player;
 import Model.Question;
 import Model.QuestionHandler;
@@ -12,42 +13,54 @@ import javax.swing.*;
 import java.io.*;
 import java.util.List;
 
+
 public class QuizController {
     private QuizGUI quizGUI;
     private QuestionHandler quiz;
     private Player player;
+
 
     private String lastSelectedCategory; //@author Ali Farhan
     private Music backgroundMusic;
     private boolean quizEnded = false;
 
 
+
+
     /**
-     * Skapar en ny QuizController och visar login-fönstret.
+     * Creates a new QuizController instance and displays the login window.
+     *
      * @author Manar Almaliki, Karam Kallab, Sleiman Sleiman, Ali Farhna
      */
-    public QuizController(){
+
+
+    public QuizController() {
+
 
         backgroundMusic = new Music("backgroundMusic.wav");
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-               LoginGUI loginGUI = new LoginGUI(QuizController.this);
+                LoginGUI loginGUI = new LoginGUI(QuizController.this);
             }
         });
     }
 
+
     /**
+     * Starts the quiz with the player's name and selected category.
      *
-     * Startar quizet med spelarens namn och vald kategori.
-     * @param playerName Namnet på spelaren.
-     * @param category Den valda kategorin för frågorna
+     * @param playerName The name of the player.
+     * @param category   The selected category for the questions.
      * @author Manar Almaliki, Karam Kallab, Ali Farhan
      */
 
+
+
+
     public void onStartQuiz(String playerName, String category) {
         this.lastSelectedCategory = category; // @author Ali Farhan
-        LoginGUI  loginGUI = null; // Stäng inloggningssidan när quizet börjar
+        LoginGUI loginGUI = null; // Stäng inloggningssidan när quizet börjar
         List<Question> questions = generateQuestionsForCategory(category);
         player = new Player(playerName, 3);
         quiz = new QuestionHandler(questions);
@@ -61,14 +74,19 @@ public class QuizController {
     }
 
 
+
+
     /**
-     * Skickar spelarens svar och uppdaterar poäng och liv.
-     * @param selectedOption Det valda svarsalternativet.
+     * Sends the player's answer and updates the score and lives.
      *
+     * @param selectedOption The selected answer option.
      * @author Manar Almaliki, Karam Kallab, Ali Farhan
      */
+
+
     public void submitAnswer(int selectedOption) {
         Question currentQuestion = quiz.getCurrentQuestion();
+
 
         if (currentQuestion != null) {
             quizGUI.resetTimer();
@@ -87,11 +105,13 @@ public class QuizController {
 
 
 
+
     /**
-     * Genererar frågor baserade på vald kategori.
-     * @param category Den valda kategorin.
-     * @return En lista med frågor för kategorin.
-     * @author Sleiman och Elias
+     * Generates questions based on the selected category.
+     *
+     * @param category The selected category.
+     * @return A list of questions for the category.
+     * @author Sleiman and Elias
      */
     private List<Question> generateQuestionsForCategory(String category) {
         switch (category) {
@@ -111,10 +131,14 @@ public class QuizController {
     }
 
 
+
+
     /**
-     * Visar nästa fråga i quizet.
+     * Displays the next question in the quiz.
+     *
      * @author Manar, Karam Kallab, Ali Farhan
      */
+
 
     private void showNextQuestion() {
         Question currentQuestion = quiz.getCurrentQuestion();
@@ -132,13 +156,19 @@ public class QuizController {
     }
 
 
+
+
     /**
-     * Avslutar quizet och visar resultatet.
+     * Ends the quiz and displays the result.
+     *
      * @author Ali Farhan
      */
+
+
     private void endQuiz() {
         if (quizEnded) return; // Kontrollera om quizen redan har avslutats
         quizEnded = true; // Sätt flaggan till true
+
 
         SwingUtilities.invokeLater(new Runnable() {
             @Override
@@ -153,30 +183,48 @@ public class QuizController {
     }
 
 
+
+
     /**
+     * Reads questions from a file for a league.
      *
-     * Läser in frågor från en fil för en liga.
-     * @return En lista med frågor för ligan.
-     *
-     * @author Elias och Sleiman
+     * @return A list of questions for the league.
+     * @author Elias and Sleiman
      */
-    private List<Question> generateCategory1Questions() { return readQuestionsFromFile("Bundesliga.txt"); }
+
+
+    private List<Question> generateCategory1Questions() {
+        return readQuestionsFromFile("Bundesliga.txt");
+    }
+
 
     private List<Question> generateCategory2Questions() {
         return readQuestionsFromFile("Premier_League.txt");
     }
 
-    private List<Question> generateCategory3Questions() { return readQuestionsFromFile("Laliga.txt"); }
-    private List<Question> generateCategory4Questions() { return readQuestionsFromFile("SerieA.txt"); }
-    private List<Question> generateCategory5Questions() { return readQuestionsFromFile("Ligue1.txt"); }
+
+    private List<Question> generateCategory3Questions() {
+        return readQuestionsFromFile("Laliga.txt");
+    }
+
+
+    private List<Question> generateCategory4Questions() {
+        return readQuestionsFromFile("SerieA.txt");
+    }
+
+
+    private List<Question> generateCategory5Questions() {
+        return readQuestionsFromFile("Ligue1.txt");
+    }
+
 
 
 
     /**
+     * Reads questions from a specified file.
      *
-     * Läser in frågor från en angiven fil.
-     * @param filename Namnet på filen med frågor.
-     * @return En lista med frågor från filen.
+     * @param filename The name of the file containing questions.
+     * @return A list of questions from the file.
      * @author Sleiman Sleiman & Elias Celayir & Karam Kallab
      */
     private List<Question> readQuestionsFromFile(String filename) {
@@ -202,18 +250,20 @@ public class QuizController {
 
 
     /**
-     * Kontrollera spelarens status i spelet
-     * @author Ali Farhan och Elias Celayir
+     * Checks the player's status in the game.
+     *
+     * @author Ali Farhan and Elias Celayir
      */
-    private void checkPlayerStatus(){
-        if(player.getLives() <= 0){
+    private void checkPlayerStatus() {
+        if (player.getLives() <= 0) {
             endQuiz();
         }
     }
 
 
     /**
-     * Startar om spelet och återställer spelarens poäng och liv.
+     * Restarts the game and resets the player's score and lives.
+     *
      * @author Ali Farhan
      */
     public void restartGame() {
@@ -224,13 +274,16 @@ public class QuizController {
                     quizGUI.getFrame().dispose();
                 }
 
+
                 player.resetScore();
                 player.resetLives(3);
 
-                // Återställ flaggan för att tillåta en ny quizomgång
-                quizEnded = false; // Lägg till denna rad
 
-                // Skapa och visa LoginGUI igen
+                // Reset the flag to allow a new quiz round
+                quizEnded = false;
+
+
+                // Create and display the LoginGUI again
                 LoginGUI loginGUI = new LoginGUI(QuizController.this);
                 loginGUI.getFrame().setVisible(true);
             }
@@ -239,16 +292,19 @@ public class QuizController {
 
 
     /**
-     * Hanterar timeout-händelsen och flyttar till nästa fråga eller avslutar quizet.
+     * Handles the timeout event and moves to the next question or ends the quiz.
+     *
      * @author Ali Farhan
      */
     public void handleTimeOut() {
         if (quizEnded) return;
 
+
         if (quiz.getCurrentQuestion() != null) {
             player.decreaseLives();
             checkPlayerStatus();
             quiz.moveToNextQuestion();
+
 
             if (quiz.hasNextQuestion()) {
                 SwingUtilities.invokeLater(new Runnable() {
@@ -260,17 +316,17 @@ public class QuizController {
             } else {
                 endQuiz();
             }
-            quizGUI.updateLives(player.getLives()); // Uppdatera GUI med antalet liv
+            quizGUI.updateLives(player.getLives());
         }
     }
 
 
-
     /**
-     * Läser in leaderboard från en fil.
-     * @param filename Namnet på filen med leaderboard.
-     * @return En lista med leaderboard-inlägg.
-     * @throws IOException Om det uppstår ett fel vid läsning från filen.
+     * Reads the leaderboard from a file.
+     *
+     * @param filename The name of the file containing the leaderboard.
+     * @return A list of leaderboard entries.
+     * @throws IOException If an error occurs while reading from the file.
      * @author Elias Celayir
      */
     private List<String[]> readLeaderboard(String filename) throws IOException {
@@ -281,8 +337,8 @@ public class QuizController {
                 String line;
                 while ((line = reader.readLine()) != null) {
                     String[] parts = line.split(":");
-                    if(parts.length == 2) {
-                        entries.add(new String[] {parts[0], parts[1].trim()});
+                    if (parts.length == 2) {
+                        entries.add(new String[]{parts[0], parts[1].trim()});
                     }
                 }
             }
@@ -290,9 +346,14 @@ public class QuizController {
         return entries;
     }
 
+
     /**
-     * Metod som sparar leaderboard till textfilen. Metoden sorterar listan och sparar de 5
-     * bästa resultaten till filen.
+     * Saves the leaderboard to the text file. The method sorts the list and saves the top 5
+     * scores to the file.
+     *
+     * @param entries  The leaderboard entries to be saved.
+     * @param filename The name of the file to save the leaderboard to.
+     * @throws IOException If an error occurs while writing to the file.
      * @author Elias Celayir
      */
     private void SaveLeaderboard(List<String[]> entries, String filename) throws IOException {
@@ -313,19 +374,20 @@ public class QuizController {
     }
 
 
-
     /**
-     * Metod som sparar spelarens resultat till leaderboard, den funkar till varje kategori och
-     * sparar de 5 bästa resultaten till filen.
-     * @author Ali Farhan och Elias Celayir
+     * Saves the player's score to the leaderboard, it works for every category and saves
+     * the top 5 scores to the file.
+     *
+     * @author Ali Farhan and Elias Celayir
      */
     public void saveScoreToLeaderboard() {
         String category = lastSelectedCategory;
         String filename = "leaderboard_" + category + ".txt";
 
+
         try {
             List<String[]> entries = readLeaderboard(filename);
-            entries.add(new String[] {player.getName(), String.valueOf(player.getScore())});
+            entries.add(new String[]{player.getName(), String.valueOf(player.getScore())});
             SaveLeaderboard(entries, filename);
         } catch (IOException e) {
             System.err.println("Error writing to the leaderboard file: " + e.getMessage());
@@ -334,7 +396,8 @@ public class QuizController {
 
 
     /**
-     * Ökar volymen på bakgrundsmusiken.
+     * Increases the volume of the background music.
+     *
      * @author Ali Farhan
      */
     public void increaseVolume() {
@@ -343,35 +406,38 @@ public class QuizController {
         }
     }
 
+
     /**
-     * Minskar volymen på bakgrundsmusiken.
+     * Decreases the volume of the background music.
+     *
      * @author Ali Farhan
      */
-
     public void decreaseVolume() {
         if (backgroundMusic != null) {
             backgroundMusic.decreaseVolume();
         }
     }
 
+
     /**
-     * Stänger av bakgrundsmusiken.
+     * Mutes the background music.
+     *
      * @author Ali Farhan
      */
-
     public void mute() {
         if (backgroundMusic != null) {
             backgroundMusic.mute();
         }
     }
 
+
     /**
-     * Hämtar den senast valda kategorin.
-     * @return Den senast valda kategorin.
-     * @author Elias Celayir
+     * Retrieves the last selected category.
+     *
+     * @return The last selected category.
+     * @uthor Elias Celayir
      */
     public String getLastSelectedCategory() {
         return lastSelectedCategory;
     }
-
 }

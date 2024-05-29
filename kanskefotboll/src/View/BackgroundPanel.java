@@ -1,22 +1,24 @@
 package View;
 
+
 import javax.swing.*;
 import java.awt.*;
 
 
 /**
- * En JPanel som tillåter att en bakgrundsbild ritas på panelen.
- * @author Ali Farhan
+ * A JPanel that allows a background image to be drawn on the panel.
+ *
+ * @uthor Ali Farhan
  */
 public class BackgroundPanel extends JPanel {
     private Image backgroundImage;
 
 
     /**
-     * Skapar en BackgroundPanel med en specificerad bakgrundsbild.
+     * Creates a BackgroundPanel with a specified background image.
      *
-     * @param backgroundImage Bilden som ska användas som bakgrund.
-     * @author Ali Farhan
+     * @param backgroundImage The image to be used as background.
+     * @uthor Ali Farhan
      */
     public BackgroundPanel(Image backgroundImage) {
         this.backgroundImage = backgroundImage;
@@ -24,10 +26,10 @@ public class BackgroundPanel extends JPanel {
 
 
     /**
-     * Ritar komponenten och dess bakgrundsbild. Bakgrundsbilden skalas för att fylla hela panelen.
+     * Draws the component and its background image. The background image is scaled to fill the entire panel.
      *
-     * @param g Grafikkontexten som används för att rita komponenten.
-     * @author Ali Farhan
+     * @param g The graphics context used to draw the component.
+     * @uthor Ali Farhan
      */
     @Override
     protected void paintComponent(Graphics g) {

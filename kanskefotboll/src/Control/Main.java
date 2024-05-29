@@ -1,7 +1,7 @@
 package Control;
 
 /**
- * Huvudklassen som startar quizapplikationen genom att skapa en instans av QuizController.
+ * The main class that starts the quiz application by creating an instance of QuizController.
  *
  * @author Manar Almaliki
  */

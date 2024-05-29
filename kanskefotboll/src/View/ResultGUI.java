@@ -1,6 +1,8 @@
 package View;
 
+
 import Control.QuizController;
+
 
 import javax.swing.*;
 import java.awt.*;
@@ -10,10 +12,10 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
+
 /**
- * ResultGUI visar resultatet av quizet och ger alternativ för att spela igen, avsluta eller visa ledartavlan.
- *
- * @author Ali Farhan
+ * ResultGUI displays the result of the quiz and provides options to play again, exit, or show the leaderboard.
+ * Authors: Ali Farhan, Elias Celayir
  */
 public class ResultGUI {
     private JFrame frame;
@@ -23,23 +25,25 @@ public class ResultGUI {
     private JButton leaderboardButton;
     private QuizController quizController;
 
-    /**
-     * Skapar ett nytt ResultGUI.
-     *
-     * @param quizController Kontrollern som hanterar quizlogiken.
-     * @param score Poängen spelaren fick.
-     * @param correctAnswers Antalet korrekta svar.
-     * @param totalQuestions Totala antalet frågor.
-     * @param playerName Spelarens namn.
-     * @author Ali Farhan och Elias Celayir
-     */
 
+    /**
+     * Creates a new ResultGUI.
+     *
+     * @param quizController The controller handling the quiz logic.
+     * @param score The player's score.
+     * @param correctAnswers The number of correct answers.
+     * @param totalQuestions The total number of questions.
+     * @param playerName The player's name.
+     * Authors: Ali Farhan, Elias Celayir
+     */
     public ResultGUI(QuizController quizController, int score, int correctAnswers, int totalQuestions, String playerName) {
         this.quizController = quizController;
+
 
         frame = new JFrame("Quiz Result for " + playerName);
         frame.setSize(850, 450);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
 
         ImageIcon backgroundIcon = new ImageIcon(getClass().getResource("/images/background.png"));
         BackgroundPanel backgroundPanel = new BackgroundPanel(backgroundIcon.getImage());
@@ -71,7 +75,6 @@ public class ResultGUI {
         leaderboardButton.setBackground(new Color(0xFFFFFF));
         frame.add(leaderboardButton);
 
-
         restartButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -87,6 +90,7 @@ public class ResultGUI {
             }
         });
 
+
         leaderboardButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -94,17 +98,20 @@ public class ResultGUI {
             }
         });
 
+
         frame.setLocationRelativeTo(null);
+
 
         frame.setVisible(true);
     }
 
+
     /**
-     * Returnerar filnamnet för den valda kategorin.
+     * Returns the filename for the selected category.
      *
-     * @param category Kategorin för vilken filnamnet ska returneras.
-     * @return Filnamnet för ledartavlan för den angivna kategorin.
-     * @author Elias Celayir
+     * @param category The category for which the filename is to be returned.
+     * @return The filename for the leaderboard for the specified category.
+     * Author: Elias Celayir
      */
     private String getFilenameForCategory(String category) {
         return "leaderboard_" + category.replaceAll("leaderboard", "_") + ".txt";
@@ -112,9 +119,10 @@ public class ResultGUI {
 
 
     /**
-     * Ali gjorde metoden från början. Elias ändrat så den tar in en parameter för att kunna
-     * visa leaderboard för vald kategori.
-     * @author Ali Farhan och Elias Celayir
+     * Displays the leaderboard for the selected category.
+     *
+     * @param category The category for which the leaderboard is to be displayed.
+     * Authors: Ali Farhan, Elias Celayir
      */
     public void displayLeaderboard(String category) {
         String filename = getFilenameForCategory(category);
@@ -136,5 +144,4 @@ public class ResultGUI {
         leaderboardFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         leaderboardFrame.setVisible(true);
     }
-
 }

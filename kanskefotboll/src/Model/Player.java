@@ -1,18 +1,20 @@
 package Model;
 
+
 public class Player {
     private String name;
     private int score;
     private int lives;
     private int correctAnswers;
 
+
     /**
-     * Skapar en ny spelare med angivet namn och antal liv.
-     * Startpoängen och antalet korrekta svar sätts till 0.
+     * Creates a new player with the specified name and number of lives.
+     * The starting score and number of correct answers are set to 0.
      *
-     * @param name  Namnet på spelaren.
-     * @param lives Antalet liv som spelaren startar med.
-     * @author Manar Almaliki och Karam Kallab
+     * @param name  The name of the player.
+     * @param lives The number of lives the player starts with.
+     * @author Manar Almaliki and Karam Kallab
      */
     public Player(String name, int lives) {
         this.name = name;
@@ -21,31 +23,34 @@ public class Player {
         this.correctAnswers = 0;
     }
 
+
     /**
-     * Returnerar spelarens namn.
+     * Returns the name of the player.
      *
-     * @return Namnet på spelaren.
-     * @author Manar Almaliki och Karam Kallab
+     * @return The name of the player.
+     * @uthor Manar Almaliki and Karam Kallab
      */
     public String getName() {
         return name;
     }
 
+
     /**
-     * Returnerar spelarens nuvarande poäng.
+     * Returns the player's current score.
      *
-     * @return Spelarens poäng.
-     * @author Manar och Karam
+     * @return The player's score.
+     * @uthor Manar and Karam
      */
     public int getScore() {
         return score;
     }
 
+
     /**
-     * Ökar spelarens poäng med angivet antal poäng och ökar antalet korrekta svar.
+     * Increases the player's score by the specified number of points and increments the number of correct answers.
      *
-     * @param points Antalet poäng att lägga till spelarens nuvarande poäng.
-     * @author Manar och Karam
+     * @param points The number of points to add to the player's current score.
+     * @uthor Manar and Karam
      */
     public void increaseScore(int points) {
         score += points;
@@ -54,19 +59,20 @@ public class Player {
 
 
     /**
-     * Returnerar spelarens återstående antal liv.
+     * Returns the player's remaining number of lives.
      *
-     * @return Antalet liv som spelaren har kvar.
-     * @author Manar och Karam
+     * @return The number of lives the player has remaining.
+     * @uthor Manar and Karam
      */
     public int getLives() {
         return lives;
     }
 
+
     /**
-     * Minskar spelarens antal liv med ett.
+     * Decreases the player's number of lives by one.
      *
-     * @author Manar och Karam
+     * @uthor Manar and Karam
      */
     public void decreaseLives() {
         lives--;
@@ -74,31 +80,33 @@ public class Player {
 
 
     /**
-     * Returnerar antalet korrekta svar som spelaren har gett.
+     * Returns the number of correct answers the player has given.
      *
-     * @return Antalet korrekta svar.
-     * @author Ali Farhan
+     * @return The number of correct answers.
+     * @uthor Ali Farhan
      */
     public int getCorrectAnswers() {
         return correctAnswers;
     }
 
+
     /**
-     * Återställer spelarens poäng till 0.
+     * Resets the player's score to 0.
      *
-     * @author Ali Farhan
+     * @uthor Ali Farhan
      */
     public void resetScore() {
         score = 0;
     }
 
+
     /**
-     * Återställer spelarens antal liv till ett nytt angivet värde.
+     * Resets the player's number of lives to a new specified value.
      *
-     * @param newLives Det nya antalet liv som spelaren ska ha.
-     * @author Ali Farhan
+     * @param newLives The new number of lives the player should have.
+     * @uthor Ali Farhan
      */
     public void resetLives(int newLives) {
-        lives =  newLives;
+        lives = newLives;
     }
 }

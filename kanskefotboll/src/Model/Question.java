@@ -1,19 +1,21 @@
 package Model;
 
+
 public class Question {
     private String text;
     private String[] options;
     private int correctAnswerIndex;
     private int score;
 
+
     /**
-     * Skapar en ny fråga med den angivna texten, alternativen, indexet för rätt svar och poängen för frågan.
+     * Creates a new question with the specified text, options, index of correct answer, and score.
      *
-     * @param text  Texten för frågan.
-     * @param options  Alternativen för frågan.
-     * @param correctAnswerIndex Indexet för det rätta svaret i alternativarrayen.
-     * @param score  Poängen för frågan.
-     * @author Manar Almaliki och Karam Kallab
+     * @param text              The text of the question.
+     * @param options           The options for the question.
+     * @param correctAnswerIndex The index of the correct answer in the options array.
+     * @param score             The score for the question.
+     * @author Manar Almaliki and Karam Kallab
      */
     public Question(String text, String[] options, int correctAnswerIndex, int score) {
         this.text = text;
@@ -22,41 +24,45 @@ public class Question {
         this.score = score;
     }
 
+
     /**
-     * Returnerar texten för frågan.
+     * Returns the text of the question.
      *
-     * @return Texten för frågan.
-     * @author Manar Almaliki och Karam Kallab
+     * @return The text of the question.
+     * @uthor Manar Almaliki and Karam Kallab
      */
     public String getText() {
         return text;
     }
 
+
     /**
-     * Returnerar alternativen för frågan.
+     * Returns the options for the question.
      *
-     * @return En array med alternativen för frågan.
-     * @author Manar Almaliki och Karam Kallab
+     * @return An array containing the options for the question.
+     * @uthor Manar Almaliki and Karam Kallab
      */
     public String[] getOptions() {
         return options;
     }
 
+
     /**
-     * Returnerar indexet för det rätta svaret i alternativarrayen.
+     * Returns the index of the correct answer in the options array.
      *
-     * @return Indexet för det rätta svaret.
-     * @author Manar Almaliki och Karam Kallab
+     * @return The index of the correct answer.
+     * @uthor Manar Almaliki and Karam Kallab
      */
     public int getCorrectAnswerIndex() {
         return correctAnswerIndex;
     }
 
+
     /**
-     * Returnerar poängen för frågan.
+     * Returns the score for the question.
      *
-     * @return Poängen för frågan.
-     * @author Manar Almaliki och Karam Kallab
+     * @return The score for the question.
+     * @uthor Manar Almaliki and Karam Kallab
      */
     public int getScore() {
         return score;

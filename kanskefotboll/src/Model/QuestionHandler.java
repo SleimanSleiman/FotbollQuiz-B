@@ -1,37 +1,42 @@
 package Model;
 
+
 import java.util.List;
+
 
 public class QuestionHandler {
     private List<Question> questions;
     private int currentQuestionIndex;
 
+
     /**
-     * Skapar ett nytt Quiz-objekt med en lista av frågor och sätter den aktuella frågeindex till 0.
+     * Creates a new Quiz object with a list of questions and sets the current question index to 0.
      *
-     * @param questions Listan av frågor för quizet.
-     * @author Manar Almaliki och Karam Kallab
+     * @param questions The list of questions for the quiz.
+     * @uthor Manar Almaliki and Karam Kallab
      */
     public QuestionHandler(List<Question> questions) {
         this.questions = questions;
         this.currentQuestionIndex = 0;
     }
 
+
     /**
-     * Kontrollerar om det finns fler frågor kvar i quizet.
+     * Checks if there are more questions remaining in the quiz.
      *
-     * @return true om det finns fler frågor, annars false.
-     * @author Manar Almaliki och Karam Kallab
+     * @return true if there are more questions, otherwise false.
+     * @uthor Manar Almaliki and Karam Kallab
      */
     public boolean hasNextQuestion() {
         return currentQuestionIndex < questions.size();
     }
 
+
     /**
-     * Returnerar den aktuella frågan om det finns fler frågor kvar.
+     * Returns the current question if there are more questions remaining.
      *
-     * @return Den aktuella frågan eller null om det inte finns fler frågor.
-     * @author Manar Almaliki och Karam Kallab
+     * @return The current question or null if there are no more questions.
+     * @uthor Manar Almaliki and Karam Kallab
      */
     public Question getCurrentQuestion() {
         if (hasNextQuestion()) {
@@ -41,25 +46,24 @@ public class QuestionHandler {
         }
     }
 
+
     /**
-     * Flyttar till nästa fråga i quizet genom att öka det aktuella frågeindexet med ett.
+     * Moves to the next question in the quiz by incrementing the current question index by one.
      *
-     * @author Manar Almaliki och Karam Kallab
+     * @uthor Manar Almaliki and Karam Kallab
      */
     public void moveToNextQuestion() {
         currentQuestionIndex++;
     }
 
+
     /**
-     * Returnerar listan av alla frågor i quizet.
+     * Returns the list of all questions in the quiz.
      *
-     * @return Listan av frågor.
-     * @author Ali Farhan
+     * @return The list of questions.
+     * @uthor Ali Farhan
      */
     public List<Question> getQuestions() {
         return questions;
     }
-
 }
-
-
