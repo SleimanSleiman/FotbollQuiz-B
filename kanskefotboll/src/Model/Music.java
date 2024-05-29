@@ -96,10 +96,12 @@ public class Music {
             if (!isMuted) {
                 previousVolume = volumeControl.getValue();
                 volumeControl.setValue(volumeControl.getMinimum());
+                backgroundMusic.stop(); // Stop audio playback
                 isMuted = true;
             } else {
                 volumeControl.setValue(previousVolume);
                 isMuted = false;
+                backgroundMusic.loop(Clip.LOOP_CONTINUOUSLY); // Restart audio playback
             }
         }
     }

@@ -162,17 +162,13 @@ public class QuizGUI {
         decreaseVolumeButton.addActionListener(e -> quizController.decreaseVolume());
         muteButton.addActionListener(e -> quizController.mute());
 
-
         setupTimer();
-
 
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
 
 
     }
-
-
 
 
     /**
@@ -198,10 +194,6 @@ public class QuizGUI {
     }
 
 
-
-
-
-
     /**
      * Sets up the timer counting down from 30 seconds and handles the time limit.
      * @author Ali Farhan
@@ -220,9 +212,6 @@ public class QuizGUI {
         });
     }
 
-
-
-
     /**
      * Resets the timer to 30 seconds and restarts it.
      * Authors: Ali Farhan
@@ -232,11 +221,6 @@ public class QuizGUI {
         timerLabel.setText("Time left: " + timeLeft);
         timer.restart(); // Startar om timern
     }
-
-
-
-
-
 
     /**
      * Marks the selected option and deselects the others.
@@ -253,9 +237,6 @@ public class QuizGUI {
         }
     }
 
-
-
-
     /**
      * Updates the score displayed on the screen.
      *
@@ -268,9 +249,6 @@ public class QuizGUI {
         scoreLabel.setText("Score: " + score);
     }
 
-
-
-
     /**
      * Updates the number of lives displayed on the screen.
      *
@@ -278,13 +256,9 @@ public class QuizGUI {
      * @author Manar Almaliki and Karam Kallab
      */
 
-
     public void updateLives(int lives) {
         livesLabel.setText("Lives: " + lives);
     }
-
-
-
 
     /**
      * Returns the JFrame component.
