@@ -16,6 +16,8 @@ public class LoginGUI {
     private JButton decreaseVolumeButton;
     private JButton muteButton;
 
+    private JButton instructionsButton;
+
     private QuizController quizController;
 
     /**
@@ -88,6 +90,10 @@ public class LoginGUI {
         muteButton.setBounds(750, 250, 80, 40);
         frame.add(muteButton);
 
+        instructionsButton = new JButton("Instruktioner");
+        instructionsButton.setBounds(50, 350, 150, 40);
+        frame.add(instructionsButton);
+
         startButton.addActionListener(e -> {
             String playerName = nameField.getText();
             String selectedCategory = null;
@@ -113,7 +119,7 @@ public class LoginGUI {
         increaseVolumeButton.addActionListener(e -> quizController.increaseVolume());
         decreaseVolumeButton.addActionListener(e -> quizController.decreaseVolume());
         muteButton.addActionListener(e -> quizController.mute());
-
+        instructionsButton.addActionListener(e -> new InstructionsGUI());
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
