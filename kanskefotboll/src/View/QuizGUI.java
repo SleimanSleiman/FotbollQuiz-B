@@ -208,7 +208,6 @@ public class QuizGUI {
     }
 
 
-
     /**
      * Markerar det valda alternativet och avmarkerar de andra.
      *
@@ -217,8 +216,10 @@ public class QuizGUI {
      */
     private void selectOption(int index) {
         selectedOption = index;
+        Color originalColor = new Color(0xC0FFC1);
+        Color darkerColor = originalColor.darker();
         for (int i = 0; i < optionPanels.length; i++) {
-            optionPanels[i].setBackground(i == index ? new Color(0x00FF00) : new Color(0xC0FFC1)); // Markera det valda alternativet med stark grön färg
+            optionPanels[i].setBackground(i == index ? darkerColor : originalColor);
         }
     }
 
