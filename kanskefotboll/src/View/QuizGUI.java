@@ -175,6 +175,7 @@ public class QuizGUI {
      * Displays a question and its options on the screen.
      *
      * @param question The question to be displayed.
+     * Author Ali Farhan, Manar Al-Maliki
      */
     public void showQuestion(Question question) {
         SwingUtilities.invokeLater(() -> {

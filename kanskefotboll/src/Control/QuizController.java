@@ -111,7 +111,7 @@ public class QuizController {
      *
      * @param category The selected category.
      * @return A list of questions for the category.
-     * @author Sleiman and Elias
+     * @author Manar Al-Maliki and Elias
      */
     private List<Question> generateQuestionsForCategory(String category) {
         switch (category) {
@@ -136,7 +136,7 @@ public class QuizController {
     /**
      * Displays the next question in the quiz.
      *
-     * @author Manar, Karam Kallab, Ali Farhan
+     * @author Manar Al-Maliki, Karam Kallab, Ali Farhan
      */
 
 
@@ -189,7 +189,7 @@ public class QuizController {
      * Reads questions from a file for a league.
      *
      * @return A list of questions for the league.
-     * @author Elias and Sleiman
+     * @author Elias and Manar
      */
 
 
@@ -252,7 +252,7 @@ public class QuizController {
     /**
      * Checks the player's status in the game.
      *
-     * @author Ali Farhan and Elias Celayir
+     * @author Manar Al-Maliki, Karam Kallab
      */
     private void checkPlayerStatus() {
         if (player.getLives() <= 0) {
@@ -264,7 +264,7 @@ public class QuizController {
     /**
      * Restarts the game and resets the player's score and lives.
      *
-     * @author Ali Farhan
+     * @author Ali Farhan, Manar Al-Maliki
      */
     public void restartGame() {
         SwingUtilities.invokeLater(new Runnable() {
